@@ -13,26 +13,26 @@
     </Window.Background>
     <Grid>
         <StackPanel Orientation="Horizontal">
-            <Image Width="65" Margin="120,75,10,10" Source="Images\Logo.png" 
+            <Image Width="79" Margin="120,75,10,0" Source="Images\Logo.png" 
                    HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Label Name="labelSys" Content="医疗信息管理系统" Width="200" Height="40" 
-                   FontSize="22" FontFamily="宋体-方正超大字符集" Foreground="White"
-                   Margin="0,90,10,10" VerticalAlignment="Top" ToolTip="当前登陆界面"/>
-            <Label Name="labelUserName" Content="用户名：" Width="80" Height="30" 
-                   FontSize="19" Foreground="White" FontFamily="宋体"
-                   Margin="-160,-60,0,0" HorizontalAlignment="Left"/>
-            <Label Name="labelPwd" Content="密  码：" Width="80" Height="30" 
-                   FontSize="19" Foreground="White" FontFamily="宋体"
-                   Margin="-160,55,0,0" HorizontalAlignment="Left"/>
+            <Label x:Name="labelSys" Content="图书馆借阅管理系统" Width="290" Height="48" 
+                   FontSize="22" FontFamily="宋体-方正超大字符集" Foreground="Black"
+                   Margin="0,90,10,0" VerticalAlignment="Top" ToolTip="当前登陆界面"/>
+            <Label x:Name="labelPwd" Content="密  码：" Width="80" Height="30" 
+                   FontSize="19" Foreground="Black" FontFamily="宋体"
+                   Margin="-250,254,0,200" HorizontalAlignment="Left" RenderTransformOrigin="-0.612,0.4"/>
+            <Label x:Name="labelUserName" Content="用户名：" Width="80" Height="30" 
+                   FontSize="19" Foreground="Black" FontFamily="宋体"
+                   Margin="-250,-60,0,0" HorizontalAlignment="Left"/>
         </StackPanel>
         <StackPanel Orientation="Vertical">
-            <TextBox Name="txtBoxUserName" Width="190" Height="25" 
+            <TextBox Name="txtBoxUserName" Height="26" 
                      VerticalContentAlignment="Center"  FontSize="16" FontFamily="宋体"
-                     Margin="100,199,10,10" VerticalAlignment="Center"
+                     Margin="337,199,247.667,10" VerticalAlignment="Center"
                      TextChanged="txtBoxUserName_TextChanged"/>
-            <PasswordBox Name="txtBoxPwd" Width="190" Height="25" PasswordChar="*" FontFamily="宋体"
+            <PasswordBox Name="txtBoxPwd" Height="23" PasswordChar="*" FontFamily="宋体"
                          VerticalContentAlignment="Center"  FontSize="16"
-                         Margin="100,25,10,10" VerticalAlignment="Center" 
+                         Margin="337,25,247.667,10" VerticalAlignment="Center" 
                          PasswordChanged="txtBoxPwd_PasswordChanged"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
@@ -50,10 +50,10 @@
             </Button>
         </StackPanel>
         <StackPanel Orientation="Vertical">
-            <Label Name="userNameTip"  Margin="410,199,10,10"
-                   FontSize="15" FontFamily="宋体" Foreground="Red" Height="25" Width="120"
+            <Label x:Name="userNameTip"  Margin="532,199,127.667,10"
+                   FontSize="15" FontFamily="宋体" Foreground="Red" Height="25" Width="115"
                    HorizontalAlignment="Center" />
-            <Label Name="pwdTip"  Margin="410,25,10,10"
+            <Label x:Name="pwdTip"  Margin="532,25,132.667,10"
                    FontSize="15" FontFamily="宋体" Foreground="Red" Height="25" Width="110"
                    HorizontalAlignment="Center" />
         </StackPanel>

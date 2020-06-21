@@ -1,0 +1,64 @@
+﻿<Window x:Class="UI.bookChange"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="" Height="395.772" Width="466.113">
+    <Grid Margin="0,0,0,0">
+        <GroupBox Header="信息更新" BorderBrush="Aqua" Margin="10"
+                  Name="groupBox1" RenderTransformOrigin="0.5,0.5">
+            <GroupBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.567"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </GroupBox.RenderTransform>
+            <DockPanel Margin="0,0,0,0.333">
+                <StackPanel Margin="10,3,0,0" Width="110"
+                            DockPanel.Dock="Left">
+                    <StackPanel.Resources>
+                        <Style TargetType="Label">
+                            <Setter Property="Width" Value="90"/>
+                            <Setter Property="Height" Value="30"/>
+                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            <Setter Property="Margin" Value="2.2"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <Label Content="书籍名称："/>
+                    <Label Content="ISBN 号："/>
+                    <Label Content="作   者："/>
+                    <Label Content="出 版 社："/>
+                    <Label Content=" 位  置 ："/>
+                    <Label Content=" 价  格 ："/>
+                    <Label Content=" 状  态 ："/>
+
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Right" Width="279"
+                            Margin="0,0,0,0">
+                    <StackPanel.Resources>
+                        <Style TargetType="TextBox">
+                            <Setter Property="Height" Value="22"/>
+                            <Setter Property="Width" Value="200"/>
+                            <Setter Property="Margin" Value="6"/>
+                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <TextBox Name="textBox1" />
+                    <TextBox Name="textBox2" />
+                    <TextBox Name="textBox3" Text=""/>
+                    <TextBox Name="textBox4" Text=""/>
+                    <TextBox Name="textBox5" Text=""/>
+                    <TextBox Name="textBox6" Text="" Margin="39.666,6"/>
+                    <ComboBox Name="comboBox" Text="" Margin="39.666,6"/>
+                    <Button x:Name="btnSend" Content="确认" Margin="0,20,0,0"
+                Height="25" Width="60" Click="btnSend_Click"/>
+                </StackPanel>
+            </DockPanel>
+        </GroupBox>
+    </Grid>
+</Window>

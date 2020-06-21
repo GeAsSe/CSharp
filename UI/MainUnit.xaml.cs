@@ -99,7 +99,7 @@ namespace UI
             string func = btn.Content.ToString();
             switch (func)
             {
-                case "系统管理":
+                case "图书管理":
                     #region 按钮变色
                     btn.Foreground = Brushes.LightSkyBlue;
                     btnClinicDoc.Foreground = Brushes.MidnightBlue;
@@ -126,10 +126,11 @@ namespace UI
                     //img7.ImageSource = imagetemp7;
                     //img8.ImageSource = imagetemp8;
                     #endregion
-                    showFrame.Source = new Uri("SystemManagement.xaml", UriKind.Relative);
+                    // showFrame.Source = new Uri("SystemManagement.xaml", UriKind.Relative);
+                    showFrame.Source = new Uri("bookManage.xaml", UriKind.Relative);
                     break;
 
-                case "门诊医生":
+                case "用户管理":
                     #region 按钮变色
                     btn.Foreground = Brushes.LightSkyBlue;
                     btnSys.Foreground = Brushes.MidnightBlue;
@@ -156,11 +157,10 @@ namespace UI
                     //img7.ImageSource = imagetemp71;
                     //img8.ImageSource = imagetemp81;
                     #endregion
-                    var cd = new ClinicDoctor1(lblUserName.Content.ToString());
-                    showFrame.Content = cd.Content;
+                    showFrame.Source = new Uri("userManage.xaml", UriKind.Relative);
                     break;
 
-                case "门诊管理":
+                case "罚单管理":
                     #region 按钮变色
                     btn.Foreground = Brushes.LightSkyBlue;
                     btnSys.Foreground = Brushes.MidnightBlue;
@@ -187,7 +187,7 @@ namespace UI
                     //img7.ImageSource = imagetemp72;
                     //img8.ImageSource = imagetemp82;
                     #endregion
-                    showFrame.Source = new Uri("ClinicManage.xaml", UriKind.Relative);
+                    showFrame.Source = new Uri("fineManage.xaml", UriKind.Relative);
                     break;
 
                 case "门诊收费":
@@ -365,7 +365,6 @@ namespace UI
         {
             this.WindowState = WindowState.Minimized;
         }
-
 
     }
 }
