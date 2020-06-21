@@ -14,34 +14,34 @@
                 <StackPanel.Background>
                     <ImageBrush ImageSource="Images\upperPanel.jpg" Stretch="Fill"/>
                 </StackPanel.Background>
-                <Label Content="医疗信息管理系统" 
+                <Label Content="图书馆借阅管理系统" 
                        FontFamily="黑体" FontSize="29" Foreground="White"
-                       Margin="90,15,0,0" />
-                <Label Name="lblShow" Content="当前用户："
+                       Margin="130,15,0,0" />
+                <Label x:Name="lblShow" Content="当前用户："
                        Foreground="Aqua" FontSize="16" Height="33" Width="95"
                        Margin="570 0" VerticalAlignment="Bottom"/>
-                <Label Name="lblUserName" Content="" 
+                <Label x:Name="lblTime" Height="40" Width="232"
+                       FontSize="26" Foreground="Aqua" FontFamily="宋体"
+                       VerticalAlignment="Top" Margin="-760,0,0,0"
+                       VerticalContentAlignment="Center" />
+                <Label x:Name="lblUserName" Content="" 
                        Foreground="Aqua" FontSize="16" Height="33" Width="80"
                        Margin="-1080,0,0,0" VerticalAlignment="Bottom"/>
-                <Label Name="lblDate" 
+                <Label x:Name="lblDate" 
                        Foreground="Aqua" FontSize="16" Height="33" Width="220"
-                       Margin="-720,0,0,0" VerticalAlignment="Bottom"/>
-                <Label Name="lblTime" Height="40" Width="220"
-                       FontSize="26" Foreground="Aqua" FontFamily="宋体"
-                       VerticalAlignment="Top" Margin="-670,0,0,0"
-                       VerticalContentAlignment="Center" />
-                <Button Name="btnMin" Background="Transparent" Height="20" Width="35"
-                        BorderBrush="Transparent" VerticalContentAlignment="Center" Margin="-580,-45,0,0"
+                       Margin="-800,0,0,0" VerticalAlignment="Bottom"/>
+                <Button x:Name="btnMin" Background="Transparent" Height="20" Width="35"
+                        BorderBrush="Transparent" VerticalContentAlignment="Center" Margin="-700,-45,0,0"
                          ToolTip="最小化" Click="btnMin_Click">
                     <Image Source="Images\MIN.png" Stretch="Fill"/>
                 </Button>
-                <Button Name="btnMax" Background="Transparent" Height="20" Width="35" Margin="-510,-45,0,0"
+                <Button x:Name="btnMax" Background="Transparent" Height="20" Width="35" Margin="-630,-45,0,0"
                         BorderBrush="Transparent" VerticalContentAlignment="Center"
                          ToolTip="最大化" Click="btnMax_Click">
-                    <Image Name="imgRE" Source="Images\MAX.png" Stretch="Fill"/>
+                    <Image x:Name="imgRE" Source="Images\MAX.png" Stretch="Fill"/>
                 </Button>
-                <Button Name="btnClose" Background="Transparent" Height="20" Width="35" IsCancel="True"
-                        BorderBrush="Transparent" VerticalContentAlignment="Center"  Margin="-440,-45,0,0"
+                <Button x:Name="btnClose" Background="Transparent" Height="20" Width="35" IsCancel="True"
+                        BorderBrush="Transparent" VerticalContentAlignment="Center"  Margin="-560,-45,0,0"
                         ToolTip="退出系统" Click="btnClose_Click">
                     <Image Source="Images\X.png" Stretch="Fill"/>
                 </Button>
@@ -59,21 +59,19 @@
                 </StackPanel.Resources>
                 <Grid Name="gridLeft">
                     <Button Name="btnLeft" Width="35" Height="52" Margin="0,0,0,0" 
-                        Background="Transparent" Click="btnLeft_Click">
-                        <Image Source="Images\left.png" Stretch="UniformToFill" />
-                    </Button>
+                        Background="Transparent" Click="btnLeft_Click"/>
                 </Grid>
-                <Button Name="btnSys" Content="系统管理">
+                <Button Name="btnSys" Content="图书管理" Click="Button_Click">
                     <Button.Background>
                         <ImageBrush x:Name="img1" ImageSource="Images\Btn-.png"/>
                     </Button.Background>
                 </Button>
-                <Button Name="btnClinicDoc" Content="门诊医生" >
+                <Button Name="btnClinicDoc" Content="用户管理" Click="Button_Click" >
                     <Button.Background>
                         <ImageBrush x:Name="img2" ImageSource="Images\Btn-.png"/>
                     </Button.Background>
                 </Button>
-                <Button Name="btnClinicMan" Content="门诊管理" >
+                <Button Name="btnClinicMan" Content="罚单管理" >
                     <Button.Background>
                         <ImageBrush x:Name="img3" ImageSource="Images\Btn-.png"/>
                     </Button.Background>
@@ -105,12 +103,10 @@
                 </Button>
                 <Grid Name="gridRight">
                     <Button Name="btnRight" Width="35" Height="52" Margin="0,0,0,0" 
-                        Background="Transparent" Click="btnRight_Click">
-                        <Image Source="Images\right.png" Stretch="UniformToFill"/>
-                    </Button>
+                        Background="Transparent" Click="btnRight_Click"/>
                 </Grid>
             </StackPanel>
-            <Frame Name="showFrame" Height="595" NavigationUIVisibility="Hidden">
+            <Frame Name="showFrame" Height="563" NavigationUIVisibility="Hidden">
 
             </Frame>
             <StackPanel Height="30" Orientation="Horizontal">

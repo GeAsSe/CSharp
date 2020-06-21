@@ -87,14 +87,38 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="fineManage.xaml.cs">
+      <DependentUpon>fineManage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userAddManage.xaml.cs">
+      <DependentUpon>userAddManage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userFine.xaml.cs">
+      <DependentUpon>userFine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="bookBorrow.xaml.cs">
+      <DependentUpon>bookBorrow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Authority.xaml.cs">
       <DependentUpon>Authority.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="bookChange.xaml.cs">
+      <DependentUpon>bookChange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="bookManage.xaml.cs">
+      <DependentUpon>bookManage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ClinicCharge.xaml.cs">
       <DependentUpon>ClinicCharge.xaml</DependentUpon>
     </Compile>
     <Compile Include="ClinicDoctor1.xaml.cs">
       <DependentUpon>ClinicDoctor1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userBorrowManage.xaml.cs">
+      <DependentUpon>userBorrowManage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="userManage.xaml.cs">
+      <DependentUpon>userManage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ClinicManage.xaml.cs">
       <DependentUpon>ClinicManage.xaml</DependentUpon>
@@ -172,6 +196,9 @@
     <Compile Include="SectionroomRevise.xaml.cs">
       <DependentUpon>SectionroomRevise.xaml</DependentUpon>
     </Compile>
+    <Compile Include="bookAddition.xaml.cs">
+      <DependentUpon>bookAddition.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StaffAddition.xaml.cs">
       <DependentUpon>StaffAddition.xaml</DependentUpon>
     </Compile>
@@ -184,9 +211,33 @@
     <Compile Include="Tip2.xaml.cs">
       <DependentUpon>Tip2.xaml</DependentUpon>
     </Compile>
+    <Page Include="fineManage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="userAddManage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="userFine.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="bookBorrow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Authority.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="bookChange.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="bookManage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="ClinicCharge.xaml">
       <SubType>Designer</SubType>
@@ -195,6 +246,14 @@
     <Page Include="ClinicDoctor1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="userBorrowManage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="userManage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="ClinicManage.xaml">
       <SubType>Designer</SubType>
@@ -311,6 +370,10 @@
     <Page Include="SectionroomRevise.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="bookAddition.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="StaffAddition.xaml">
       <SubType>Designer</SubType>
@@ -524,6 +587,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>hospitals.mdf</DependentUpon>
     </Content>
+    <Resource Include="Images\search.png" />
     <Resource Include="Images\tab1.png" />
     <Resource Include="Images\tab2.png" />
   </ItemGroup>
