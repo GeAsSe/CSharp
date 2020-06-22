@@ -48,6 +48,7 @@
     <Compile Include="Register_BLL.cs" />
     <Compile Include="SectionRoomBLL.cs" />
     <Compile Include="SectionRoomSonBLL.cs" />
+    <Compile Include="userBLL.cs" />
     <Compile Include="UsersBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

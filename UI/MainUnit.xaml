@@ -61,44 +61,19 @@
                     <Button Name="btnLeft" Width="35" Height="52" Margin="0,0,0,0" 
                         Background="Transparent" Click="btnLeft_Click"/>
                 </Grid>
-                <Button Name="btnSys" Content="图书管理" Click="Button_Click">
+                <Button Name="btnSys" Content="图书管理" Click="Button_Click" Margin="300 0 0 0">
                     <Button.Background>
                         <ImageBrush x:Name="img1" ImageSource="Images\Btn-.png"/>
                     </Button.Background>
                 </Button>
-                <Button Name="btnClinicDoc" Content="用户管理" Click="Button_Click" >
+                <Button Name="btnClinicDoc" Content="用户管理" Click="Button_Click" Margin="100 0 0 0 ">
                     <Button.Background>
                         <ImageBrush x:Name="img2" ImageSource="Images\Btn-.png"/>
                     </Button.Background>
                 </Button>
-                <Button Name="btnClinicMan" Content="罚单管理" >
+                <Button Name="btnClinicMan" Content="罚单管理" Margin="100 0 0 0">
                     <Button.Background>
                         <ImageBrush x:Name="img3" ImageSource="Images\Btn-.png"/>
-                    </Button.Background>
-                </Button>
-                <Button Name="btnClinicBill" Content="门诊收费" >
-                    <Button.Background>
-                        <ImageBrush x:Name="img4" ImageSource="Images\Btn-.png"/>
-                    </Button.Background>
-                </Button>
-                <Button Name="btnSickroom" Content="住院管理" >
-                    <Button.Background>
-                        <ImageBrush x:Name="img5" ImageSource="Images\Btn-.png"/>
-                    </Button.Background>
-                </Button>
-                <Button Name="btnDrugstore" Content="药房管理" >
-                    <Button.Background>
-                        <ImageBrush x:Name="img6" ImageSource="Images\Btn-.png"/>
-                    </Button.Background>
-                </Button>
-                <Button Name="btnMedicine" Content="药库管理" >
-                    <Button.Background>
-                        <ImageBrush x:Name="img7" ImageSource="Images\Btn-.png"/>
-                    </Button.Background>
-                </Button>
-                <Button Name="btnFinance" Content="财务管理" >
-                    <Button.Background>
-                        <ImageBrush x:Name="img8" ImageSource="Images\Btn-.png"/>
                     </Button.Background>
                 </Button>
                 <Grid Name="gridRight">
