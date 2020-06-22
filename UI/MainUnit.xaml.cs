@@ -102,51 +102,19 @@ namespace UI
                 case "图书管理":
                     #region 按钮变色
                     btn.Foreground = Brushes.LightSkyBlue;
-                    btnClinicDoc.Foreground = Brushes.MidnightBlue;
-                    btnClinicMan.Foreground = Brushes.MidnightBlue;
-                    //BitmapImage imagetemp1 = new BitmapImage(new Uri("\\Images\\card1.png", UriKind.Relative));
-                    //BitmapImage imagetemp2 = new BitmapImage(new Uri("\\Images\\card1.png", UriKind.Relative));
-                    //BitmapImage imagetemp3 = new BitmapImage(new Uri("\\Images\\card1.png", UriKind.Relative));
-                    //BitmapImage imagetemp4 = new BitmapImage(new Uri("\\Images\\card1.png", UriKind.Relative));
-                    //BitmapImage imagetemp5 = new BitmapImage(new Uri("\\Images\\card1.png", UriKind.Relative));
-                    //BitmapImage imagetemp6 = new BitmapImage(new Uri("\\Images\\card1.png", UriKind.Relative));
-                    //BitmapImage imagetemp7 = new BitmapImage(new Uri("\\Images\\card1.png", UriKind.Relative));
-                    //BitmapImage imagetemp8 = new BitmapImage(new Uri("\\Images\\card1.png", UriKind.Relative));
-                    //img1.ImageSource = imagetemp1;
-                    //img2.ImageSource = imagetemp2;
-                    //img3.ImageSource = imagetemp3;
-                    //img4.ImageSource = imagetemp4;
-                    //img5.ImageSource = imagetemp5;
-                    //img6.ImageSource = imagetemp6;
-                    //img7.ImageSource = imagetemp7;
-                    //img8.ImageSource = imagetemp8;
+                    btnUser.Foreground = Brushes.MidnightBlue;
+                    btnFine.Foreground = Brushes.MidnightBlue;
+                    
                     #endregion
-                    // showFrame.Source = new Uri("SystemManagement.xaml", UriKind.Relative);
                     showFrame.Source = new Uri("bookManage.xaml", UriKind.Relative);
                     break;
 
                 case "用户管理":
                     #region 按钮变色
                     btn.Foreground = Brushes.LightSkyBlue;
-                    btnSys.Foreground = Brushes.MidnightBlue;
-                    btnClinicMan.Foreground = Brushes.MidnightBlue;
+                    btnBook.Foreground = Brushes.MidnightBlue;
+                    btnFine.Foreground = Brushes.MidnightBlue;
 
-                    //BitmapImage imagetemp11 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp21 = new BitmapImage(new Uri("\\Images\\Btn+.png", UriKind.Relative));
-                    //BitmapImage imagetemp31 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp41 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp51 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp61 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp71 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp81 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //img1.ImageSource = imagetemp11;
-                    //img2.ImageSource = imagetemp21;
-                    //img3.ImageSource = imagetemp31;
-                    //img4.ImageSource = imagetemp41;
-                    //img5.ImageSource = imagetemp51;
-                    //img6.ImageSource = imagetemp61;
-                    //img7.ImageSource = imagetemp71;
-                    //img8.ImageSource = imagetemp81;
                     #endregion
                     showFrame.Source = new Uri("userManage.xaml", UriKind.Relative);
                     break;
@@ -154,8 +122,8 @@ namespace UI
                 case "罚单管理":
                     #region 按钮变色
                     btn.Foreground = Brushes.LightSkyBlue;
-                    btnSys.Foreground = Brushes.MidnightBlue;
-                    btnClinicDoc.Foreground = Brushes.MidnightBlue;
+                    btnBook.Foreground = Brushes.MidnightBlue;
+                    btnUser.Foreground = Brushes.MidnightBlue;
 
                     //BitmapImage imagetemp12 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
                     //BitmapImage imagetemp22 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
@@ -175,138 +143,6 @@ namespace UI
                     //img8.ImageSource = imagetemp82;
                     #endregion
                     showFrame.Source = new Uri("fineManage.xaml", UriKind.Relative);
-                    break;
-
-                case "门诊收费":
-                    #region 按钮变色
-                    btn.Foreground = Brushes.LightSkyBlue;
-                    btnSys.Foreground = Brushes.MidnightBlue;
-                    btnClinicDoc.Foreground = Brushes.MidnightBlue;
-                    btnClinicMan.Foreground = Brushes.MidnightBlue;
-                    //BitmapImage imagetemp13 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp23 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp33 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp43 = new BitmapImage(new Uri("\\Images\\Btn+.png", UriKind.Relative));
-                    //BitmapImage imagetemp53 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp63 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp73 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp83 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //img1.ImageSource = imagetemp13;
-                    //img2.ImageSource = imagetemp23;
-                    //img3.ImageSource = imagetemp33;
-                    //img4.ImageSource = imagetemp43;
-                    //img5.ImageSource = imagetemp53;
-                    //img6.ImageSource = imagetemp63;
-                    //img7.ImageSource = imagetemp73;
-                    //img8.ImageSource = imagetemp83;
-                    #endregion
-                    var cc = new ClinicCharge(lblUserName.Content.ToString());
-                    showFrame.Content = cc.Content;
-                    break;
-
-                case "住院管理":
-                    #region 按钮变色
-                    btn.Foreground = Brushes.LightSkyBlue;
-                    btnSys.Foreground = Brushes.MidnightBlue;
-                    btnClinicDoc.Foreground = Brushes.MidnightBlue;
-                    btnClinicMan.Foreground = Brushes.MidnightBlue;
-                    //BitmapImage imagetemp14 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp24 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp34 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp44 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp54 = new BitmapImage(new Uri("\\Images\\Btn+.png", UriKind.Relative));
-                    //BitmapImage imagetemp64 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp74 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp84 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //img1.ImageSource = imagetemp14;
-                    //img2.ImageSource = imagetemp24;
-                    //img3.ImageSource = imagetemp34;
-                    //img4.ImageSource = imagetemp44;
-                    //img5.ImageSource = imagetemp54;
-                    //img6.ImageSource = imagetemp64;
-                    //img7.ImageSource = imagetemp74;
-                    //img8.ImageSource = imagetemp84;
-                    #endregion
-                    showFrame.Source = new Uri("HospitalManage.xaml", UriKind.Relative);
-                    break;
-
-                case "药房管理":
-                    #region 按钮变色
-                    btn.Foreground = Brushes.LightSkyBlue;
-                    btnSys.Foreground = Brushes.MidnightBlue;
-                    btnClinicDoc.Foreground = Brushes.MidnightBlue;
-                    btnClinicMan.Foreground = Brushes.MidnightBlue;
-
-                    //BitmapImage imagetemp15= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp25= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp35= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp45= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp55= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp65= new BitmapImage(new Uri("\\Images\\Btn+.png", UriKind.Relative));
-                    //BitmapImage imagetemp75= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp85= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //img1.ImageSource = imagetemp15;
-                    //img2.ImageSource = imagetemp25;
-                    //img3.ImageSource = imagetemp35;
-                    //img4.ImageSource = imagetemp45;
-                    //img5.ImageSource = imagetemp55;
-                    //img6.ImageSource = imagetemp65;
-                    //img7.ImageSource = imagetemp75;
-                    //img8.ImageSource = imagetemp85;
-                    #endregion
-                    showFrame.Source = new Uri("Drugstore.xaml", UriKind.Relative);
-                    break;
-
-                case "药库管理":
-                    #region 按钮变色
-                    btn.Foreground = Brushes.LightSkyBlue;
-                    btnSys.Foreground = Brushes.MidnightBlue;
-                    btnClinicDoc.Foreground = Brushes.MidnightBlue;
-                    btnClinicMan.Foreground = Brushes.MidnightBlue;
-                    //BitmapImage imagetemp16= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp26= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp36= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp46= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp56= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp66= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp76= new BitmapImage(new Uri("\\Images\\Btn+.png", UriKind.Relative));
-                    //BitmapImage imagetemp86= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //img1.ImageSource = imagetemp16;
-                    //img2.ImageSource = imagetemp26;
-                    //img3.ImageSource = imagetemp36;
-                    //img4.ImageSource = imagetemp46;
-                    //img5.ImageSource = imagetemp56;
-                    //img6.ImageSource = imagetemp66;
-                    //img7.ImageSource = imagetemp76;
-                    //img8.ImageSource = imagetemp86;
-                    #endregion
-                    showFrame.Source = new Uri("Medicine.xaml", UriKind.Relative);
-                    break;
-
-                case "财务管理":
-                    #region 按钮变色
-                    btn.Foreground = Brushes.LightSkyBlue;
-                    btnSys.Foreground = Brushes.MidnightBlue;
-                    btnClinicDoc.Foreground = Brushes.MidnightBlue;
-                    btnClinicMan.Foreground = Brushes.MidnightBlue;
-                    //BitmapImage imagetemp17= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp27= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp37= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp47= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp57= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp67= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp77= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
-                    //BitmapImage imagetemp87= new BitmapImage(new Uri("\\Images\\Btn+.png", UriKind.Relative));
-                    //img1.ImageSource = imagetemp17;
-                    //img2.ImageSource = imagetemp27;
-                    //img3.ImageSource = imagetemp37;
-                    //img4.ImageSource = imagetemp47;
-                    //img5.ImageSource = imagetemp57;
-                    //img6.ImageSource = imagetemp67;
-                    //img7.ImageSource = imagetemp77;
-                    //img8.ImageSource = imagetemp87;
-                    #endregion
-                    showFrame.Source = new Uri("Finance.xaml", UriKind.Relative);
                     break;
             }
         }

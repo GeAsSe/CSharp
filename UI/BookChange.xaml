@@ -48,13 +48,19 @@
                             <Setter Property="VerticalContentAlignment" Value="Center"/>
                         </Style>
                     </StackPanel.Resources>
-                    <TextBox Name="textBox1" />
-                    <TextBox Name="textBox2" />
-                    <TextBox Name="textBox3" Text=""/>
-                    <TextBox Name="textBox4" Text=""/>
-                    <TextBox Name="textBox5" Text=""/>
-                    <TextBox Name="textBox6" Text="" Margin="39.666,6"/>
-                    <ComboBox Name="comboBox" Text="" Margin="39.666,6"/>
+                    <TextBox Name="txtBname" />
+                    <TextBox Name="txtIsbn" />
+                    <TextBox Name="txtAuthor" Text=""/>
+                    <TextBox Name="txtPublisher" Text=""/>
+                    <TextBox Name="txtPlace" Text=""/>
+                    <TextBox Name="txtPrice" Text="" Margin="39.666,6"/>
+                    <ComboBox Name="comboStatus" Text="" Margin="39.666,6">
+                        <ComboBoxItem>丢 失</ComboBoxItem>
+                        <ComboBoxItem>在 馆</ComboBoxItem>
+                        <ComboBoxItem>预 定</ComboBoxItem>
+                        <ComboBoxItem>借 出</ComboBoxItem>
+                    </ComboBox>
+                    <Label x:Name="Tip" Content="" Foreground="Red"  HorizontalAlignment="Center" Margin="91,0,64.667,0" Width="123"/>
                     <Button x:Name="btnSend" Content="确认" Margin="0,20,0,0"
                 Height="25" Width="60" Click="btnSend_Click"/>
                 </StackPanel>

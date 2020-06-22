@@ -79,5 +79,30 @@ namespace DAL
             
         }
 
+        public static bool ExecuteNonQueryProc(string cText,params MySqlParameter[] ps)
+        {
+            try
+            {
+                conn = new MySqlConnection(connString);
+                conn.Open();
+                cmd = new MySqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = cText;
+                cmd.Parameters.AddRange(ps);
+
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            
+        }
+
     }
 }
