@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BillPrintDAL.cs" />
+    <Compile Include="bookDAL.cs" />
     <Compile Include="DBHelper.cs" />
     <Compile Include="Drug_insert_DAL.cs" />
     <Compile Include="IdCard_DAL.cs" />

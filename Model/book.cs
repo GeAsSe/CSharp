@@ -9,7 +9,7 @@ namespace Model
     public class book
     {
         public int bid { get; set; }            //书的id
-        public string name { get; set; }        //书名
+        public string bname { get; set; }        //书名
         public string isbn { get; set; }        //书的isbn号
         public Decimal price { get; set; }      //书的价格
         public string publisher { get; set; }   //出版社

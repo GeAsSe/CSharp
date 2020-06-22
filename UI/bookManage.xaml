@@ -17,12 +17,12 @@
         <GroupBox Name="groupBox3" Grid.Row="0" Header="书籍信息查询" HorizontalAlignment="Left" Margin="19,25,0,37" Width="1317" RenderTransformOrigin="0.479,0.719">
             <TextBox HorizontalAlignment="Left" Height="24" Margin="352,22,0,0" 
                      TextWrapping="Wrap"  VerticalAlignment="Top" Width="124" 
-                     Name="txtdoct" RenderTransformOrigin="0.444,0.86"/>
+                     Name="txtIsbn" RenderTransformOrigin="0.444,0.86"/>
         </GroupBox>
         <TextBox HorizontalAlignment="Left" Height="24" 
                  Margin="149,64,0,0" TextWrapping="Wrap" 
                  Text="" VerticalAlignment="Top" Width="127" 
-                 Name="txtRid"/>
+                 Name="txtName"/>
         <Label Content="ISBN号:" HorizontalAlignment="Left" Height="26" Margin="308,61,0,0" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.647,0.306">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -40,27 +40,30 @@
         <Label Content="状 态:" HorizontalAlignment="Left" Height="27" Margin="1028,62,0,0" VerticalAlignment="Top" Width="68" RenderTransformOrigin="3.333,0.741"/>
         <ComboBox HorizontalAlignment="Left" Height="22" Margin="1085,62,0,0" 
                   VerticalAlignment="Top" Width="88" 
-                  Name="cboroom" SelectionChanged="Cboroom_SelectionChanged">
-            <ComboBoxItem></ComboBoxItem>
+                  Name="comboStatus" SelectionChanged="Cboroom_SelectionChanged">
+            <ComboBoxItem>丢 失</ComboBoxItem>
+            <ComboBoxItem>在 馆</ComboBoxItem>
+            <ComboBoxItem>预 定</ComboBoxItem>
+            <ComboBoxItem>借 出</ComboBoxItem>
         </ComboBox>
         <TextBox HorizontalAlignment="Left" Height="24" Margin="597,61,0,0" 
                  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100"
-                 Name="txtname" RenderTransformOrigin="0.632,1.097"/>
+                 Name="txtAuthor" RenderTransformOrigin="0.632,1.097"/>
         <TextBox HorizontalAlignment="Left" Height="24" Margin="824,62,0,0" 
                  TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="152"
-                 Name="txtidno"/>
+                 Name="txtPublisher"/>
         <Label Content="作者: " HorizontalAlignment="Left" Height="24" Margin="546,62,0,0" VerticalAlignment="Top" Width="74"/>
         <Label Content="出版社: " HorizontalAlignment="Left" Height="24" Margin="751,62,0,0" VerticalAlignment="Top" Width="73"/>
-        <ListView HorizontalAlignment="Left" Height="309" Margin="19,53,0,0" Grid.Row="1" VerticalAlignment="Top" Width="1317" Grid.RowSpan="2" SelectionChanged="ListView_SelectionChanged">
+        <ListView HorizontalAlignment="Center" Height="309" Margin="19,53,0,0" Grid.Row="1" VerticalAlignment="Top" Width="1317" Grid.RowSpan="2" Name="bookListView">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="ISBN"    Width="170" />
-                    <GridViewColumn Header="书名"     Width="250" />
-                    <GridViewColumn Header="作者"     Width="250" />
-                    <GridViewColumn Header="出版社"   Width="150" />
-                    <GridViewColumn Header="位置"     Width="250" />
-                    <GridViewColumn Header="价格"     Width="150" />
-                    <GridViewColumn Header="状态"     Width="100" />
+                    <GridViewColumn Header="ISBN"     Width="170"  DisplayMemberBinding="{Binding Path=c1}" />
+                    <GridViewColumn Header="书名"     Width="250" DisplayMemberBinding="{Binding Path=c2}" />
+                    <GridViewColumn Header="作者"     Width="250" DisplayMemberBinding="{Binding Path=c3}" />
+                    <GridViewColumn Header="出版社"   Width="150" DisplayMemberBinding="{Binding Path=c4}" />
+                    <GridViewColumn Header="位置"     Width="250" DisplayMemberBinding="{Binding Path=c5}" />
+                    <GridViewColumn Header="价格"     Width="150" DisplayMemberBinding="{Binding Path=c6}" />
+                    <GridViewColumn Header="状态"     Width="100" DisplayMemberBinding="{Binding Path=c7}" />
 
                 </GridView>
             </ListView.View>
@@ -73,5 +76,6 @@
         <Button Content="删除图书" HorizontalAlignment="Left" Margin="1130,180,0,0" VerticalAlignment="Top" Width="162" Height="48" Grid.RowSpan="2"/>
 
     </Grid>
-
 </Page>
+    
+    

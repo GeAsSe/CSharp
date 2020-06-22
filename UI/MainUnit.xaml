@@ -61,17 +61,17 @@
                     <Button Name="btnLeft" Width="35" Height="52" Margin="0,0,0,0" 
                         Background="Transparent" Click="btnLeft_Click"/>
                 </Grid>
-                <Button Name="btnSys" Content="图书管理" Click="Button_Click" Margin="300 0 0 0">
+                <Button Name="btnBook" Content="图书管理" Click="Button_Click" Margin="300 0 0 0">
                     <Button.Background>
                         <ImageBrush x:Name="img1" ImageSource="Images\Btn-.png"/>
                     </Button.Background>
                 </Button>
-                <Button Name="btnClinicDoc" Content="用户管理" Click="Button_Click" Margin="100 0 0 0 ">
+                <Button Name="btnUser" Content="用户管理" Click="Button_Click" Margin="100 0 0 0 ">
                     <Button.Background>
                         <ImageBrush x:Name="img2" ImageSource="Images\Btn-.png"/>
                     </Button.Background>
                 </Button>
-                <Button Name="btnClinicMan" Content="罚单管理" Margin="100 0 0 0">
+                <Button Name="btnFine" Content="罚单管理" Margin="100 0 0 0">
                     <Button.Background>
                         <ImageBrush x:Name="img3" ImageSource="Images\Btn-.png"/>
                     </Button.Background>
