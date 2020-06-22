@@ -30,13 +30,23 @@ namespace UI
         /// </summary>
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            Users u = new Users
+            int id;
+            try
             {
-                Uname = txtBoxUserName.Text,
-                Pwd = txtBoxPwd.Password
+                id = int.Parse(txtBoxUserName.Text); 
+            }
+            catch
+            {
+                id = 0;
+            }
+
+            user u = new user
+            {
+                uid = id,
+                password = txtBoxPwd.Password
             };
 
-            int i = new UsersBLL().Check(u);
+            int i = new userBLL().Check(u);
             if (txtBoxUserName.Text == "")
             {
                 userNameTip.Visibility = Visibility.Visible;
@@ -63,11 +73,11 @@ namespace UI
             {
                 MessageBox.Show("系统错误!", "系统提示");
             }
-            else
+            else if(i == 4)
             {
                 MainUnit m = new MainUnit
                 {
-                    Tag = txtBoxUserName.Text
+                    Tag = new userBLL().getName(u)
                 };
                 m.Show();
                 this.Close();
@@ -99,11 +109,7 @@ namespace UI
         /// </summary>
         private void Window_MouseMove(object sender, System.Windows.Input.MouseEventArgs e)
         {
-            try
-            {
-                this.DragMove();
-            }
-            catch{ }
+            
         }
         /// <summary>
         /// 鼠标进入“登陆”按钮

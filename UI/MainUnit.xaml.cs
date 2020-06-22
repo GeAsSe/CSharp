@@ -104,11 +104,6 @@ namespace UI
                     btn.Foreground = Brushes.LightSkyBlue;
                     btnClinicDoc.Foreground = Brushes.MidnightBlue;
                     btnClinicMan.Foreground = Brushes.MidnightBlue;
-                    btnClinicBill.Foreground = Brushes.MidnightBlue;
-                    btnSickroom.Foreground = Brushes.MidnightBlue;
-                    btnDrugstore.Foreground = Brushes.MidnightBlue;
-                    btnMedicine.Foreground = Brushes.MidnightBlue;
-                    btnFinance.Foreground = Brushes.MidnightBlue;
                     //BitmapImage imagetemp1 = new BitmapImage(new Uri("\\Images\\card1.png", UriKind.Relative));
                     //BitmapImage imagetemp2 = new BitmapImage(new Uri("\\Images\\card1.png", UriKind.Relative));
                     //BitmapImage imagetemp3 = new BitmapImage(new Uri("\\Images\\card1.png", UriKind.Relative));
@@ -135,11 +130,7 @@ namespace UI
                     btn.Foreground = Brushes.LightSkyBlue;
                     btnSys.Foreground = Brushes.MidnightBlue;
                     btnClinicMan.Foreground = Brushes.MidnightBlue;
-                    btnClinicBill.Foreground = Brushes.MidnightBlue;
-                    btnSickroom.Foreground = Brushes.MidnightBlue;
-                    btnDrugstore.Foreground = Brushes.MidnightBlue;
-                    btnMedicine.Foreground = Brushes.MidnightBlue;
-                    btnFinance.Foreground = Brushes.MidnightBlue;
+
                     //BitmapImage imagetemp11 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
                     //BitmapImage imagetemp21 = new BitmapImage(new Uri("\\Images\\Btn+.png", UriKind.Relative));
                     //BitmapImage imagetemp31 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
@@ -165,11 +156,7 @@ namespace UI
                     btn.Foreground = Brushes.LightSkyBlue;
                     btnSys.Foreground = Brushes.MidnightBlue;
                     btnClinicDoc.Foreground = Brushes.MidnightBlue;
-                    btnClinicBill.Foreground = Brushes.MidnightBlue;
-                    btnSickroom.Foreground = Brushes.MidnightBlue;
-                    btnDrugstore.Foreground = Brushes.MidnightBlue;
-                    btnMedicine.Foreground = Brushes.MidnightBlue;
-                    btnFinance.Foreground = Brushes.MidnightBlue;
+
                     //BitmapImage imagetemp12 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
                     //BitmapImage imagetemp22 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
                     //BitmapImage imagetemp32 = new BitmapImage(new Uri("\\Images\\Btn+.png", UriKind.Relative));
@@ -196,10 +183,6 @@ namespace UI
                     btnSys.Foreground = Brushes.MidnightBlue;
                     btnClinicDoc.Foreground = Brushes.MidnightBlue;
                     btnClinicMan.Foreground = Brushes.MidnightBlue;
-                    btnSickroom.Foreground = Brushes.MidnightBlue;
-                    btnDrugstore.Foreground = Brushes.MidnightBlue;
-                    btnMedicine.Foreground = Brushes.MidnightBlue;
-                    btnFinance.Foreground = Brushes.MidnightBlue;
                     //BitmapImage imagetemp13 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
                     //BitmapImage imagetemp23 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
                     //BitmapImage imagetemp33 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
@@ -224,13 +207,9 @@ namespace UI
                 case "住院管理":
                     #region 按钮变色
                     btn.Foreground = Brushes.LightSkyBlue;
-                    btnClinicBill.Foreground = Brushes.MidnightBlue;
                     btnSys.Foreground = Brushes.MidnightBlue;
                     btnClinicDoc.Foreground = Brushes.MidnightBlue;
                     btnClinicMan.Foreground = Brushes.MidnightBlue;
-                    btnDrugstore.Foreground = Brushes.MidnightBlue;
-                    btnMedicine.Foreground = Brushes.MidnightBlue;
-                    btnFinance.Foreground = Brushes.MidnightBlue;
                     //BitmapImage imagetemp14 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
                     //BitmapImage imagetemp24 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
                     //BitmapImage imagetemp34 = new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
@@ -254,13 +233,10 @@ namespace UI
                 case "药房管理":
                     #region 按钮变色
                     btn.Foreground = Brushes.LightSkyBlue;
-                    btnMedicine.Foreground = Brushes.MidnightBlue;
-                    btnFinance.Foreground = Brushes.MidnightBlue;
-                    btnClinicBill.Foreground = Brushes.MidnightBlue;
                     btnSys.Foreground = Brushes.MidnightBlue;
                     btnClinicDoc.Foreground = Brushes.MidnightBlue;
                     btnClinicMan.Foreground = Brushes.MidnightBlue;
-                    btnSickroom.Foreground = Brushes.MidnightBlue;
+
                     //BitmapImage imagetemp15= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
                     //BitmapImage imagetemp25= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
                     //BitmapImage imagetemp35= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
@@ -284,13 +260,9 @@ namespace UI
                 case "药库管理":
                     #region 按钮变色
                     btn.Foreground = Brushes.LightSkyBlue;
-                    btnFinance.Foreground = Brushes.MidnightBlue;
-                    btnClinicBill.Foreground = Brushes.MidnightBlue;
                     btnSys.Foreground = Brushes.MidnightBlue;
                     btnClinicDoc.Foreground = Brushes.MidnightBlue;
                     btnClinicMan.Foreground = Brushes.MidnightBlue;
-                    btnSickroom.Foreground = Brushes.MidnightBlue;
-                    btnDrugstore.Foreground = Brushes.MidnightBlue;
                     //BitmapImage imagetemp16= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
                     //BitmapImage imagetemp26= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
                     //BitmapImage imagetemp36= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
@@ -314,13 +286,9 @@ namespace UI
                 case "财务管理":
                     #region 按钮变色
                     btn.Foreground = Brushes.LightSkyBlue;
-                    btnClinicBill.Foreground = Brushes.MidnightBlue;
                     btnSys.Foreground = Brushes.MidnightBlue;
                     btnClinicDoc.Foreground = Brushes.MidnightBlue;
                     btnClinicMan.Foreground = Brushes.MidnightBlue;
-                    btnSickroom.Foreground = Brushes.MidnightBlue;
-                    btnDrugstore.Foreground = Brushes.MidnightBlue;
-                    btnMedicine.Foreground = Brushes.MidnightBlue;
                     //BitmapImage imagetemp17= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
                     //BitmapImage imagetemp27= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
                     //BitmapImage imagetemp37= new BitmapImage(new Uri("\\Images\\Btn-.png", UriKind.Relative));
