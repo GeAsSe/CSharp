@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="BillPrintBLL.cs" />
     <Compile Include="bookBLL.cs" />
+    <Compile Include="borrowBLL.cs" />
     <Compile Include="Drug_insert_BLL.cs" />
     <Compile Include="IdCard_BLL.cs" />
     <Compile Include="Prescribe_BLL.cs" />

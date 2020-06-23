@@ -123,7 +123,7 @@ namespace DAL
 
         public bool updateBook(int bid, string bname, string isbn, string author, string publisher, string place, Decimal price)
         {
-            string cText = "update table book set bname=@bname, isbn=@isbn, author=@auther, publisher=@publisher, place=@place, price=@price where bid=@bid";
+            string cText = "update book set bname=@bname, isbn=@isbn, author=@author, publisher=@publisher, place=@place, price=@price where bid=@bid";
             MySqlParameter Bname = new MySqlParameter("@bname", MySqlDbType.VarChar);
             MySqlParameter Isbn = new MySqlParameter("@isbn", MySqlDbType.VarChar);
             MySqlParameter Author = new MySqlParameter("@author", MySqlDbType.VarChar);

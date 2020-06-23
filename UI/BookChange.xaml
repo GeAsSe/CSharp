@@ -7,8 +7,13 @@
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         Title="" Height="395.772" Width="466.113">
     <Grid Margin="0,0,0,0">
-        <GroupBox Header="信息更新" BorderBrush="Aqua" Margin="10"
-                  Name="groupBox1" RenderTransformOrigin="0.5,0.5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="444*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="信息更新" BorderBrush="Aqua" Margin="10,10,7.931,9.667"
+                  Name="groupBox1" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
             <GroupBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

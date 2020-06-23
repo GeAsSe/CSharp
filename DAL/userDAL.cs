@@ -29,5 +29,28 @@ namespace DAL
             reader.Close();
             return name;
         }
+
+        public user getUser(user u)
+        {
+            string cText = "select * from user where admin=0 and uid=" + u.uid.ToString();
+            MySqlDataReader reader = MysqlHelper.getReader(cText);
+            if(reader.Read() == false)
+            {
+                user uu = new user
+                {
+                    uid = 0,
+                    name = ""
+                };
+                return uu;
+            }
+            user uuu = new user
+            {
+                uid = int.Parse(reader["uid"].ToString()),
+                name = reader["name"].ToString()
+            };
+            MysqlHelper.conn.Close();
+            reader.Close();
+            return uuu;
+        }
     }
 }

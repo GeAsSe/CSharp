@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -17,7 +18,7 @@ using System.Windows.Shapes;
 namespace UI
 {
     public delegate void updateBookHandler();
-
+    
     /// <summary>
     /// bookChange.xaml 的交互逻辑
     /// </summary>
@@ -42,7 +43,6 @@ namespace UI
         }
 
 
-
         private void btnSend_Click(object sender, RoutedEventArgs e)
         {
             int bid = changebook.bid;
@@ -65,6 +65,7 @@ namespace UI
                     }
                     else
                     {
+                        //writelock.Set();
                         this.Close();
                         MessageBox.Show("修改信息成功！");
                         updateBookEvent();
@@ -80,7 +81,7 @@ namespace UI
                 Tip.Content = "输入信息不能为空！";
             }
         }
-
+        
 
     }
 }

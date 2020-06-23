@@ -19,5 +19,10 @@ namespace BLL
         {
             return new userDAL().getName(u);
         }
+
+        public user getUser(user u)
+        {
+            return new userDAL().getUser(u);
+        }
     }
 }
