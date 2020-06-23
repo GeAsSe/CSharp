@@ -50,6 +50,7 @@
     <Compile Include="IdCard.cs" />
     <Compile Include="Kaiyao.cs" />
     <Compile Include="Maidan.cs" />
+    <Compile Include="MyBorrow.cs" />
     <Compile Include="MyControl.cs" />
     <Compile Include="p_zhuayuantongji.cs" />
     <Compile Include="Register.cs" />

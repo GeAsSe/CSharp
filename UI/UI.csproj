@@ -90,6 +90,15 @@
     <Compile Include="fineManage.xaml.cs">
       <DependentUpon>fineManage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyBook.xaml.cs">
+      <DependentUpon>MyBook.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyHistory.xaml.cs">
+      <DependentUpon>MyHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchBook.xaml.cs">
+      <DependentUpon>SearchBook.xaml</DependentUpon>
+    </Compile>
     <Compile Include="userAddManage.xaml.cs">
       <DependentUpon>userAddManage.xaml</DependentUpon>
     </Compile>
@@ -211,9 +220,24 @@
     <Compile Include="Tip2.xaml.cs">
       <DependentUpon>Tip2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserWindow.xaml.cs">
+      <DependentUpon>UserWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="fineManage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MyBook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyHistory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchBook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="userAddManage.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -388,6 +412,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Tip2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

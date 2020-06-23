@@ -1,0 +1,36 @@
+﻿<Page x:Class="UI.MyBook"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UI"
+      mc:Ignorable="d" 
+      d:DesignHeight="595" d:DesignWidth="1088"
+      Title="userBorrowManage" Background="White">
+
+    <StackPanel>
+        <DataGrid Height="336" Margin="133,15,102,-50" x:Name="bookListView" SelectionChanged="BookListView_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding c1}" Header="书名"     Width="150"/>
+                <DataGridTextColumn Binding="{Binding c2}" Header="作者"     Width="150"/>
+                <DataGridTextColumn Binding="{Binding c3}" Header="出版社"     Width="150"/>
+                <DataGridTextColumn Binding="{Binding c4}" Header="最晚还书时间"   Width="150"/>
+                <DataGridTextColumn Binding="{Binding c5}" Header="状态"   Width="120"/>
+                <DataGridTemplateColumn Header="操作" Width="200">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" >
+                                <Button x:Name="Action1" Content="续借" Visibility="{Binding c6}"
+                                    Width="100"  IsEnabled="{Binding Enabled}" Click="order"
+                                     HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                <Button x:Name="Action2" Content="挂失" Visibility="{Binding c7}"
+                                    Width="100" IsEnabled="{Binding Enabled}" Click="lose"
+                                     HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </StackPanel>
+</Page>

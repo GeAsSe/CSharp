@@ -75,11 +75,24 @@ namespace UI
             }
             else if(i == 4)
             {
+                
                 MainUnit m = new MainUnit
                 {
                     Tag = new userBLL().getName(u)
                 };
                 m.Show();
+                this.Close();
+            }
+            else if(i==5)
+            {
+                List<string> a = new List<string>();
+                a.Add(new userBLL().getName(u));
+                a.Add(u.uid.ToString());
+                UserWindow n = new UserWindow
+                {  
+                    Tag = a
+                };
+                n.Show();
                 this.Close();
             }
         }

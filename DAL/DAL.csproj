@@ -34,7 +34,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="BillPrintDAL.cs" />
     <Compile Include="bookDAL.cs" />
+    <Compile Include="bookitDAL.cs" />
     <Compile Include="borrowDAL.cs" />
     <Compile Include="DBHelper.cs" />
     <Compile Include="Drug_insert_DAL.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Register_DAL.cs" />
     <Compile Include="SectionRoomDAL.cs" />
     <Compile Include="SectionRoomSonDAL.cs" />
+    <Compile Include="UserBookDAL.cs" />
     <Compile Include="userDAL.cs" />
     <Compile Include="UsersDAL.cs" />
   </ItemGroup>
@@ -67,6 +69,9 @@
       <Project>{c7e40869-6b95-42ac-b015-1d688fcf1089}</Project>
       <Name>Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
