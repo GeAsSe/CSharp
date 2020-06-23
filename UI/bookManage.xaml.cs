@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -23,6 +24,7 @@ namespace UI
     /// </summary>
     public partial class bookManage : Page
     {
+        public static AutoResetEvent writelock = new AutoResetEvent(true);
         List<book> books;
         public bookManage()
         {
@@ -148,8 +150,27 @@ namespace UI
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            Window a = new bookBorrow();
-            a.ShowDialog();
+            Task t = new Task(() => OpenBorrow());
+            t.Start();
         }
+
+        public void OpenBorrow()
+        {
+            writelock.WaitOne();
+            Dispatcher.Invoke((Action)(() =>
+            {
+                int index = bookListView.SelectedIndex;
+                if (index == -1 || books[index].status == 0 || books[index].status == 3)
+                {
+                    writelock.Set();
+                    return;
+                }
+                bookBorrow a = new bookBorrow(books[index]);
+                a.borrowBookEvent += new borrowBookHandler(initView);
+                a.Show();
+            }));
+        }
+
+            
     }
 }

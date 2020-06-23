@@ -8,29 +8,30 @@
         Title="图书借出" Height="469.749" Width="870.804">
     <Grid HorizontalAlignment="Left" Margin="0,0,0,-0.333" Width="861">
         <Button x:Name="btnConfirm" 
-                Margin="358,324,415,69"
+                Margin="379,355,394,38"
                 Content="确认" Click="BtnConfirm_Click"/>
         <Button x:Name="btnCancel" 
-            Margin="585,324,190,69"
+            Margin="614,355,161,38"
             Content="取消" Click="BtnCancel_Click"/>
-        <ListView HorizontalAlignment="Left" Height="191" Margin="10,21,0,0" VerticalAlignment="Top" Width="841" SelectionChanged="ListView_SelectionChanged">
+        <ListView Name="BookView"  HorizontalAlignment="Left" Height="191" Margin="10,21,0,0" VerticalAlignment="Top" Width="841" SelectionChanged="ListView_SelectionChanged">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="编号"    Width="120" />
-                    <GridViewColumn Header="ISBN"    Width="120" />
-                    <GridViewColumn Header="书名"     Width="250" />
-                    <GridViewColumn Header="作者"     Width="200" />
-                    <GridViewColumn Header="出版社"   Width="150" />
+                    <GridViewColumn Header="编号"    Width="120" DisplayMemberBinding="{Binding Path=c1}"/>
+                    <GridViewColumn Header="ISBN"    Width="120" DisplayMemberBinding="{Binding Path=c2}"/>
+                    <GridViewColumn Header="书名"     Width="250" DisplayMemberBinding="{Binding Path=c3}"/>
+                    <GridViewColumn Header="作者"     Width="200" DisplayMemberBinding="{Binding Path=c4}"/>
+                    <GridViewColumn Header="出版社"   Width="150" DisplayMemberBinding="{Binding Path=c5}"/>
                 </GridView>
             </ListView.View>
         </ListView>
         <Label Content="学 号：" HorizontalAlignment="Left" Margin="102,269,0,0" VerticalAlignment="Top" Height="36" Width="57" FontSize="18"/>
         <Button x:Name="btnChoose" 
-            Margin="130,324,642,70"
+            Margin="151,356,621,38"
             Content="选择" Click="BtnChoose_Click"/>
-        <TextBox HorizontalAlignment="Left" Height="36" Margin="187,269,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="163" FontSize="24"/>
+        <TextBox Name="Uid"  HorizontalAlignment="Left" Height="36" Margin="187,269,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="163" FontSize="24"/>
         <Label Content="姓 名：" HorizontalAlignment="Left" Margin="464,269,0,0" VerticalAlignment="Top" Height="36" Width="57" FontSize="18"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="36" Margin="562,269,0,0" VerticalAlignment="Top" Width="163" Background="Gray"/>
-        <Label Content="Hello" Margin="614,269,190,0" VerticalAlignment="Top" Height="36" FontSize="18"/>
+        <Label x:Name="Uname" Content="" Margin="601,269,174,0" VerticalAlignment="Top" Height="36" FontSize="18" HorizontalAlignment="Center"/>
+        <Label x:Name="Tip" Content="" Foreground="Red" HorizontalAlignment="Center" Margin="345,325,384,0" VerticalAlignment="Top" Width="132"/>
     </Grid>
 </Window>
