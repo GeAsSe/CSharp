@@ -539,10 +539,6 @@
     <Resource Include="Images\ylk2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\bingren1.png" />
-    <Resource Include="Images\bingren2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\hos1.png" />
     <Resource Include="Images\hos2.png" />
   </ItemGroup>
@@ -587,6 +583,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>hospitals.mdf</DependentUpon>
     </Content>
+    <Resource Include="Images\jieyue1.png" />
+    <Resource Include="Images\jieyue2.png" />
     <Resource Include="Images\search.png" />
     <Resource Include="Images\tab1.png" />
     <Resource Include="Images\tab2.png" />

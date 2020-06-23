@@ -29,5 +29,10 @@ namespace BLL
         {
             return new bookDAL().updateBook(bid, bname, isbn, author, publisher, place, price);
         }
+
+        public bool deleteBook(book b)
+        {
+            return new bookDAL().deleteBook(b);
+        }
     }
 }

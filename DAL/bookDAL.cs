@@ -145,6 +145,11 @@ namespace DAL
             return MysqlHelper.ExecuteNonQueryProc(cText, sp);
         }
 
+        public bool deleteBook(book b)
+        {
+            string cText = "delete from book where bid=" + b.bid;
+            return MysqlHelper.ExecuteNonQueryProc(cText);
+        }
     }
 }
 

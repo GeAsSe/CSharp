@@ -33,22 +33,22 @@ namespace UI
             {
                 case "borrowManage":
                     #region 按钮换图
-                    BitmapImage imagetemp1 = new BitmapImage(new Uri("\\Images\\bingren2.png", UriKind.Relative));
+                    BitmapImage imagetemp1 = new BitmapImage(new Uri("\\Images\\jieyue2.png", UriKind.Relative));
                     BitmapImage imagetemp2 = new BitmapImage(new Uri("\\Images\\card1.png", UriKind.Relative));
                     img1.Source = imagetemp1;
                     img2.Source = imagetemp2;
                     #endregion
-                    clinicManFrame.Source = new Uri("userBorrowManage.xaml", UriKind.Relative);
+                    userFrame.Source = new Uri("userBorrowManage.xaml", UriKind.Relative);
                     break;
 
                 case "userAddManage":
                     #region 按钮换图
-                    BitmapImage imagetemp11 = new BitmapImage(new Uri("\\Images\\bingren1.png", UriKind.Relative));
+                    BitmapImage imagetemp11 = new BitmapImage(new Uri("\\Images\\jieyue1.png", UriKind.Relative));
                     BitmapImage imagetemp21 = new BitmapImage(new Uri("\\Images\\card2.png", UriKind.Relative));
                     img1.Source = imagetemp11;
                     img2.Source = imagetemp21;
                     #endregion
-                    clinicManFrame.Source = new Uri("userAddManage.xaml", UriKind.Relative);
+                    userFrame.Source = new Uri("userAddManage.xaml", UriKind.Relative);
                     break;
             }
         }
