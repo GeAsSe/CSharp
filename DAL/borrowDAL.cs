@@ -25,7 +25,7 @@ namespace DAL
                 }
                 reader1.Close();
                 MysqlHelper.conn.Close();
-                string cText2 = "select * from history where borrowtimes!=0 and uid=" + u.uid;
+                string cText2 = "select * from history where borrowtimes!=0 and borrowtimes!=-1 and uid=" + u.uid;
                 MySqlDataReader reader2= MysqlHelper.getReader(cText2);
                 string nowDate = DateTime.Now.ToString("yyyy-MM-dd");
                 while (reader2.Read())

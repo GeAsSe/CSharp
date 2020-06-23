@@ -171,6 +171,32 @@ namespace UI
             }));
         }
 
-            
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            int index = bookListView.SelectedIndex;
+            if (index == -1 || books[index].status == 3)
+            {
+                if (index != -1)
+                {
+                    MessageBox.Show("此书不可删除。");
+                }
+                return;
+            }
+            MessageBoxResult dr = MessageBox.Show("确认删除"+books[index].bname+"？", "提示", MessageBoxButton.OKCancel, MessageBoxImage.Question);
+            if (dr == MessageBoxResult.OK)
+            {
+                bool result = new bookBLL().deleteBook(books[index]);
+                if(result == true)
+                {
+                    MessageBox.Show("删除成功!");
+                    initView();
+                }
+                else
+                {
+                    MessageBox.Show("删除失败！");
+                }
+            }
+
+        }
     }
 }

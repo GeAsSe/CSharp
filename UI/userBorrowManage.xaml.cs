@@ -30,5 +30,23 @@ namespace UI
             Window a = new userFine();
             a.ShowDialog();
         }
+
+        private void Button_Click2(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click3(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Search(object sender, RoutedEventArgs e)
+        {
+            if(Uid.Text != "")
+            {
+
+            }
+        }
     }
 }
