@@ -47,7 +47,17 @@ namespace UI
 
         private void btnSend_Click(object sender, RoutedEventArgs e)
         {
-
+            bool result =  new borrowBLL().lossBook(hh, b);
+            if(result == false)
+            {
+                MessageBox.Show("挂失失败!");
+            }
+            else
+            {
+                MessageBox.Show("挂失成功");
+                lossBookEvent();
+            }
+            this.Close();
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)

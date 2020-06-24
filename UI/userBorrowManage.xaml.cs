@@ -39,6 +39,7 @@ namespace UI
                 return;
             }
             userFine a = new userFine(histories[index]);
+            a.lossBookEvent += new lossBookHandler(InitView);
             a.ShowDialog();
         }
 
