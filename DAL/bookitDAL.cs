@@ -24,7 +24,7 @@ namespace DAL
 
         public bool order(string bname,int userId,DateTime time)
         {
-            string cText = "update history set time=@time,borrowtimes=2 where bname=@bname and uid =@uid";
+            string cText = "update history set time=@time,borrowtimes=2 where bname=@bname and uid =@uid and borrowtimes=1";
             MySqlParameter Time = new MySqlParameter("@time", MySqlDbType.VarChar);
             MySqlParameter Bname = new MySqlParameter("@bname", MySqlDbType.VarChar);
             MySqlParameter UID = new MySqlParameter("@uid", MySqlDbType.Int32);
@@ -37,7 +37,7 @@ namespace DAL
 
         public bool lose(int uid, string bname,string time)
         {
-            string s1 = "update history set borrowtimes=-1 where bname=@bname and uid =@uid";
+            string s1 = "update history set borrowtimes=-1 where bname=@bname and uid =@uid and borrowtimes>0";
             MySqlParameter Bname = new MySqlParameter("@bname", MySqlDbType.VarChar);
             MySqlParameter UID = new MySqlParameter("@uid", MySqlDbType.Int32);
             Bname.Value = bname;
@@ -45,7 +45,7 @@ namespace DAL
             MySqlParameter[] sp1 = { Bname, UID };
             MysqlHelper.ExecuteNonQueryProc(s1, sp1);
 
-            string s2= "update book set status=0 where bid=(select bid from history where bname=@bname and uid =@uid)";
+            string s2= "update book set status=0 where bid=(select bid from history where bname=@bname and uid =@uid and borrowtimes=-1 )";
             MySqlParameter Bname1 = new MySqlParameter("@bname", MySqlDbType.VarChar);
             MySqlParameter UID1 = new MySqlParameter("@uid", MySqlDbType.Int32);
             Bname1.Value = bname;
@@ -54,8 +54,8 @@ namespace DAL
             MysqlHelper.ExecuteNonQueryProc(s2, sp2);
 
             string s3 = "insert into fine(uid,name,bid,bname,panalty,ftime) " +
-                "values(@uid,(select name from history where bname=@bname and uid =@uid),(select bid from history where bname=@bname and uid =@uid),@bname," +
-                "(select price from history natural join book where bname=@bname and uid =@uid),@time)";
+                "values(@uid,(select name from history where bname=@bname and uid =@uid and borrowtimes=-1),(select bid from history where bname=@bname and uid =@uid and borrowtimes=-1),@bname," +
+                "(select price from history natural join book where bname=@bname and uid =@uid and status=0 and borrowtimes=-1),@time)";
             MySqlParameter Bname2 = new MySqlParameter("@bname", MySqlDbType.VarChar);
             MySqlParameter UID2 = new MySqlParameter("@uid", MySqlDbType.Int32);
             MySqlParameter Time = new MySqlParameter("@time", MySqlDbType.VarChar);
