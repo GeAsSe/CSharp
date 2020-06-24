@@ -46,11 +46,11 @@
                             <Setter Property="VerticalContentAlignment" Value="Center"/>
                         </Style>
                     </StackPanel.Resources>
-                    <TextBox Name="textBox1" />
-                    <TextBox Name="textBox2" />
-                    <TextBox Name="textBox4" Text=""/>
-                    <TextBox Name="textBox5" Text=""/>
-                    <TextBox Name="textBox6" Text="" Margin="39.666,6"/>
+                    <TextBox Name="txtBname" />
+                    <TextBox Name="txtTime" />
+                    <TextBox Name="txtUid" Text=""/>
+                    <TextBox Name="txtName" Text=""/>
+                    <TextBox Name="txtFine" Text="" Margin="39.666,6"/>
                     <Button x:Name="btnSend" Content="提交" Margin="-100,10,0,0"
                 Height="25" Width="60" Click="btnSend_Click"/>
                     <Button Name="btnCancel" Content="取消" Margin="100,-25,0,0"

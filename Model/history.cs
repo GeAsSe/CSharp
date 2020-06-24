@@ -8,6 +8,7 @@ namespace Model
 {
     public class history
     {
+        public int hid { get; set; }        //借阅记录的id
         public int uid { get; set; }        //借阅记录的user id
         public string name { get; set; }    //借阅记录的user name
         public int bid { get; set; }        //借阅记录的book id

@@ -24,6 +24,7 @@
                 <Label Content="图书借阅查询" Margin="0,0,0,0"/>
                 <Label Content="学 号 :" Width="83" Margin="250,30,0,0" FontSize="15"/>
                 <TextBox Name="Uid" HorizontalAlignment="Left" Margin="10,33,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="28" Width="190" FontSize="18"/>
+                <Label x:Name="Tip" Content="" Foreground="Red" Margin="10,33,10,15" HorizontalAlignment="Center" Width="141"/>
                 <Button Content="查询" Width="80" Height="28"  Margin="50,30,0,14" Click="Button_Search">
                     <Button.Background>
                         <ImageBrush x:Name="img" ImageSource="Images\search.png"/>
@@ -36,14 +37,14 @@
         <Button Content="图书归还" Height="32" Width="80" Margin="100,15,700,0" Click="Button_Click2"/>
         <Button Content="图书挂失" Height="32" Width="80" Margin="100,-32,200,0" Click="Button_Click"/>
         <Button Content="图书续借" Height="32" Width="80" Margin="100,-32,-300,0" Click="Button_Click3"/>
-        <ListView Height="349" Margin="50,15,37,-50">
+        <ListView Height="349" Margin="50,15,37,-50" Name="borrowListView">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="书名" Width="280"    />
-                    <GridViewColumn Header="作者" Width="200"     />
-                    <GridViewColumn Header="出版社" Width="200"     />
-                    <GridViewColumn Header="借阅时间" Width="170"     />
-                    <GridViewColumn Header="状态" Width="150" />
+                    <GridViewColumn Header="编号" Width="200"  DisplayMemberBinding="{Binding Path=c1}"  />
+                    <GridViewColumn Header="书名" Width="280"  DisplayMemberBinding="{Binding Path=c2}"   />
+                    <GridViewColumn Header="可续借" Width="200" DisplayMemberBinding="{Binding Path=c3}"    />
+                    <GridViewColumn Header="到期时间" Width="170" DisplayMemberBinding="{Binding Path=c4}"    />
+                    <GridViewColumn x:Name="state" Header="状态" Width="150" DisplayMemberBinding="{Binding Path=c5}"/>
                 </GridView>
             </ListView.View>
         </ListView>

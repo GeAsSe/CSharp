@@ -150,6 +150,25 @@ namespace DAL
             string cText = "delete from book where bid=" + b.bid;
             return MysqlHelper.ExecuteNonQueryProc(cText);
         }
+
+        public book GetBook(int bid)
+        {
+            book b = new book();
+            string cText = "select * from book where bid=" + bid;
+            MySqlDataReader reader = MysqlHelper.getReader(cText);
+            reader.Read();
+            b.bid = int.Parse(reader["bid"] + "");
+            b.bname = reader["bname"] + "";
+            b.isbn = reader["isbn"] + "";
+            b.price = (Decimal)reader["price"];
+            b.publisher = reader["publisher"] + "";
+            b.author = reader["author"] + "";
+            b.place = reader["place"] + "";
+            b.status = int.Parse(reader["status"] + "");
+            MysqlHelper.conn.Close();
+            reader.Close();
+            return b;
+        }
     }
 }
 

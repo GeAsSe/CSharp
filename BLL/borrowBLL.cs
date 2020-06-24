@@ -14,5 +14,20 @@ namespace BLL
         {
             return new borrowDAL().Borrow(u, b);
         }
+
+        public List<history> getHistories(user u)
+        {
+            return new borrowDAL().GetHistories(u);
+        }
+
+        public bool returnBook(int uid, int bid, int borrowtimes)
+        {
+            return new borrowDAL().returnBook(uid, bid, borrowtimes);
+        }
+
+        public bool renewBook(int uid, int bid, int borrowtimes, string time)
+        {
+            return new borrowDAL().renewBook(uid, bid, borrowtimes, time);
+        }
     }
 }

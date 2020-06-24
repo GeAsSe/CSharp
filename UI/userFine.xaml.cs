@@ -16,14 +16,32 @@ using System.Windows.Shapes;
 
 namespace UI
 {
+
+    public delegate void lossBookHandler();
     /// <summary>
     /// userFine.xaml 的交互逻辑
     /// </summary>
     public partial class userFine : Window
     {
-        public userFine()
+        history hh;
+        book b;
+        public event lossBookHandler lossBookEvent;
+
+        public userFine(history h)
         {
+            b = new bookBLL().GetBook(h.bid);
             InitializeComponent();
+            hh = h;
+            txtBname.Text = h.bname;
+            txtBname.IsEnabled = false;
+            txtTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            txtTime.IsEnabled = false;
+            txtUid.Text = h.uid.ToString();
+            txtUid.IsEnabled = false;
+            txtName.Text = h.name;
+            txtName.IsEnabled = false;
+            txtFine.Text = b.price.ToString();
+            txtFine.IsEnabled = false;
         }
 
 
@@ -34,7 +52,7 @@ namespace UI
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }
