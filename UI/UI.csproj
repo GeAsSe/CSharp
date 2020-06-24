@@ -81,6 +81,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Wpfz\Wpfz.dll</HintPath>
     </Reference>
+    <Reference Include="xxxxx.Interop">
+      <HintPath>COM\xxxxx.Interop.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -461,6 +465,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{f059f380-732c-44dd-b014-f60df1d92ad1}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CLR1\CLR1.vcxproj">
+      <Project>{e22e8a18-5437-494f-bfd5-decb80032ded}</Project>
+      <Name>CLR1</Name>
     </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{c7e40869-6b95-42ac-b015-1d688fcf1089}</Project>

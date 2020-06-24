@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using BLL;
 using Model;
-
+using xxxxx.Interop;
 namespace UI
 {
     /// <summary>
@@ -77,6 +77,8 @@ namespace UI
             string c = (a.GetType().GetProperty("c4").GetValue(a, null)).ToString();
             new bookitBLL().order(b, uid, c);
             initView();
+            OBJ o = new OBJ();
+            o.push("续借成功！");
         }
 
         public void lose(object sender, RoutedEventArgs e)
@@ -85,6 +87,8 @@ namespace UI
             string b = (a.GetType().GetProperty("c1").GetValue(a, null)).ToString();
             new bookitBLL().lose(uid, b);
             initView();
+            OBJ o = new OBJ();
+            o.push("挂失成功！");
         }
         private void BookListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

@@ -16,6 +16,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using xxxxx.Interop;
+using CLR1;
+using System.Runtime.InteropServices;
 
 namespace UI
 {
@@ -125,7 +128,22 @@ namespace UI
             new bookitBLL().bitit(uid, b);
             searchbook();
             Console.WriteLine(b);
+
+            //使用C++/CLI
+            int y=Class1.x(2);
+
+            
+            int r = MyAdd((int)9, (int)22);
+            string p = Environment.CurrentDirectory;
+
+            //使用COM
+            OBJ o = new OBJ();
+            o.push("预定成功！"+y.ToString()+" "+p+" "+r.ToString());
         }
+
+        //使用win32dll
+        [DllImport("PROJECT11.dll", CallingConvention = CallingConvention.StdCall)]
+        public static extern int MyAdd(int x, int y);
 
         private void Cboroom_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
