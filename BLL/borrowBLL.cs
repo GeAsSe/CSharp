@@ -29,5 +29,10 @@ namespace BLL
         {
             return new borrowDAL().renewBook(uid, bid, borrowtimes, time);
         }
+
+        public bool lossBook(history h, book b)
+        {
+            return new borrowDAL().lossBook(h, b);
+        }
     }
 }

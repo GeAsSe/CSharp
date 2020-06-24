@@ -116,5 +116,30 @@ namespace DAL
             string cText = "update history set time='" + ntime + "', borrowtimes=2 where uid=" + uid + " and bid=" + bid + " and borrowtimes=" + borrowtimes;
             return MysqlHelper.ExecuteNonQueryProc(cText);
         }
+
+        public bool lossBook(history h, book b)
+        {
+            string cText = "update book set status=0 where bid=" + b.bid;
+            MysqlHelper.ExecuteNonQueryProc(cText);
+            string cText2 = "update history set borrowtimes=-1 where bid=" + h.bid + " and uid=" + h.uid + " and borrowtimes=" + h.borrowtime;
+            MysqlHelper.ExecuteNonQueryProc(cText2);
+            string cText3 = "insert into fine(uid, name, bid, bname, panalty, ftime) values (@uid, @name, @bid, @bname, @panalty, @ftime)";
+            MySqlParameter Uid = new MySqlParameter("@uid", MySqlDbType.Int32);
+            MySqlParameter Name = new MySqlParameter("@name", MySqlDbType.VarChar);
+            MySqlParameter Bid = new MySqlParameter("@bid", MySqlDbType.Int32);
+            MySqlParameter Bname = new MySqlParameter("@bname", MySqlDbType.VarChar);
+            MySqlParameter Panalty = new MySqlParameter("@panalty", MySqlDbType.Decimal);
+            MySqlParameter Ftime = new MySqlParameter("@ftime", MySqlDbType.VarChar);
+            Uid.Value = h.uid;
+            Name.Value = h.name;
+            Bid.Value = h.bid;
+            Bname.Value = h.bname;
+            Panalty.Value = b.price;
+            Ftime.Value = DateTime.Now.ToString("yyyy-MM-dd");
+
+            MySqlParameter[] sp = { Uid, Name, Bid, Bname, Panalty, Ftime };
+            return MysqlHelper.ExecuteNonQueryProc(cText3, sp);
+
+        }
     }
 }
