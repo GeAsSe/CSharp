@@ -64,5 +64,57 @@ namespace DAL
                 return -1;
             }
         }
+
+        public List<history> GetHistories(user u)
+        {
+            List<history> histories = new List<history>();
+            string cText = "select * from history where borrowtimes!=-1 and borrowtimes!=0 and uid=" + u.uid;
+            MySqlDataReader reader = MysqlHelper.getReader(cText);
+            while (reader.Read())
+            {
+                history h = new history();
+                h.uid = int.Parse(reader["uid"] + "");
+                h.name = reader["name"] + "";
+                h.bid = int.Parse(reader["bid"] + "");
+                h.bname = reader["bname"] + "";
+                h.time = reader["time"] + "";
+                h.borrowtime = int.Parse(reader["borrowtimes"] + "");
+
+                histories.Add(h);
+            }
+            MysqlHelper.conn.Close();
+            reader.Close();
+            return histories;
+        }
+
+        public bool returnBook(int uid, int bid, int borrowtimes)
+        {
+            string cText1 = "update book set `status`=1 where bid=" + bid;
+            MysqlHelper.ExecuteNonQueryProc(cText1);
+
+            string cText2 = "update history set borrowtimes=0 where uid=" + uid + " and bid=" + bid + " and borrowtimes=" + borrowtimes;
+            return MysqlHelper.ExecuteNonQueryProc(cText2);
+        }
+
+        public bool renewBook(int uid, int bid, int borrowtimes, string time)
+        {
+            string cText2 = "select * from history where borrowtimes!=0 and borrowtimes!=-1 and uid=" + uid;
+            MySqlDataReader reader2 = MysqlHelper.getReader(cText2);
+            string nowDate = DateTime.Now.ToString("yyyy-MM-dd");
+            while (reader2.Read())
+            {
+                if (DateTime.Parse(nowDate) > DateTime.Parse(reader2["time"].ToString()))
+                {
+                    reader2.Close();
+                    MysqlHelper.conn.Close();
+                    return false;
+                }
+            }
+            reader2.Close();
+            MysqlHelper.conn.Close();
+            string ntime = DateTime.Parse(time).AddDays(30).ToString("yyyy-MM-dd");
+            string cText = "update history set time='" + ntime + "', borrowtimes=2 where uid=" + uid + " and bid=" + bid + " and borrowtimes=" + borrowtimes;
+            return MysqlHelper.ExecuteNonQueryProc(cText);
+        }
     }
 }

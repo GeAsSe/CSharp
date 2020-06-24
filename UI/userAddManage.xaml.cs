@@ -27,8 +27,7 @@ namespace UI
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Window a = new userFine();
-            a.ShowDialog();
+            
         }
     }
 }

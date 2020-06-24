@@ -34,5 +34,10 @@ namespace BLL
         {
             return new bookDAL().deleteBook(b);
         }
+
+        public book GetBook(int bid)
+        {
+            return new bookDAL().GetBook(bid);
+        }
     }
 }
