@@ -76,6 +76,7 @@ namespace UI
                 }
 
             }
+            Tip.Content = "";
             users = new userBLL().GetUsers();
             InitView();
         }

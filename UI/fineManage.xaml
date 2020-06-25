@@ -9,28 +9,30 @@
       Title="ClinicManage_register" Background="White">
 
     <Grid>
-        <GroupBox Name="groupBox1" Header="罚单信息查询" HorizontalAlignment="Left" Height="128" VerticalAlignment="Top" Width="948" Margin="200,42,0,0"/>
-        <Button Name="btnSearch" Click="BtnSearch_Click" Content="搜索" HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="615,135,0,0" Height="35">
+        <GroupBox Name="groupBox1" Header="罚单信息查询" HorizontalAlignment="Left" Height="135" VerticalAlignment="Top" Width="945" Margin="200,42,0,0"/>
+        <Button Name="btnSearch" Click="BtnSearch_Click" Content="搜索" HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="648,135,0,0" Height="35">
             <Button.Background>
                 <ImageBrush x:Name="img" ImageSource="Images\search.png"/>
             </Button.Background>
         </Button>
         <Label Content="学号：" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,89,0,0" RenderTransformOrigin="0.8,0.48"/>
-        <TextBox Name="txtRid" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="133" Margin="300,89,0,0"/>
+        <TextBox Name="Uid" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="133" Margin="300,89,0,0"/>
         <Label Content="开始日期：" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="550,89,0,0"/>
-        <DatePicker Name="dtpRegisterTime" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="630,89,0,0" Width="133"/>
+        <DatePicker Name="startTime" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="630,89,0,0" Width="133"/>
         <Label Content="截至日期：" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="840,89,0,0"/>
-        <DatePicker Name="dtpSeeDoctorTime" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="920,89,0,0" Width="132"/>
+        <Label x:Name="Tip" Content="" Foreground="Red" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="797,140,0,0"/>
+        <DatePicker Name="endTime" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="920,89,0,0" Width="132"/>
+
         <StackPanel Orientation="Horizontal"/>
         <StackPanel Orientation="Horizontal" Margin="-10,-10,10,9.667">
-            <ListView Width="965" Margin="200,200,0,44.667">
+            <ListView Name="fineListView" Width="965" Margin="200,200,0,44.667">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="学号" Width="150"    />
-                        <GridViewColumn Header="姓名" Width="200"     />
-                        <GridViewColumn Header="书名" Width="300"     />
-                        <GridViewColumn Header="罚金" Width="150"     />
-                        <GridViewColumn Header="时间" Width="160"     />
+                        <GridViewColumn Header="学号" Width="150" DisplayMemberBinding="{Binding Path=c1}"   />
+                        <GridViewColumn Header="姓名" Width="200" DisplayMemberBinding="{Binding Path=c2}"    />
+                        <GridViewColumn Header="书名" Width="270" DisplayMemberBinding="{Binding Path=c3}"    />
+                        <GridViewColumn Header="罚金" Width="150" DisplayMemberBinding="{Binding Path=c4}"    />
+                        <GridViewColumn Header="时间" Width="160" DisplayMemberBinding="{Binding Path=c5}"    />
                     </GridView>
                 </ListView.View>
             </ListView>

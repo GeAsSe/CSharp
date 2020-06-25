@@ -52,6 +52,7 @@
     <Compile Include="borrowDAL.cs" />
     <Compile Include="DBHelper.cs" />
     <Compile Include="Drug_insert_DAL.cs" />
+    <Compile Include="fineDAL.cs" />
     <Compile Include="IdCard_DAL.cs" />
     <Compile Include="MysqlHelper.cs" />
     <Compile Include="Prescribe_DAL.cs" />
