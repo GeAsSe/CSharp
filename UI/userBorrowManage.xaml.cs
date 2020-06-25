@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BLL;
 using Model;
+using CLR1;
+using System.Runtime.InteropServices;
 
 
 namespace UI
@@ -54,7 +56,7 @@ namespace UI
             InitView();
         }
 
-        private void Button_Click3(object sender, RoutedEventArgs e)
+        private unsafe void Button_Click3(object sender, RoutedEventArgs e)
         {
             int index = borrowListView.SelectedIndex;
             if (index == -1 || histories[index].borrowtime==2)
@@ -65,6 +67,19 @@ namespace UI
                 }
                 return;
             }
+
+            IntPtr intPtrStr1 = (IntPtr)Marshal.StringToHGlobalAnsi(histories[index].time);
+            sbyte* sbyteStr1 = (sbyte*)intPtrStr1;
+            string nowDate = DateTime.Now.ToString("yyyy-MM-dd");
+            IntPtr intPtrStr2 = (IntPtr)Marshal.StringToHGlobalAnsi(nowDate);
+            sbyte* sbyteStr2 = (sbyte*)intPtrStr2;
+
+            if(Class1.DateMinus(sbyteStr1, sbyteStr2) > 15)
+            {
+                MessageBox.Show("只能在还期15天内续借！");
+                return;
+            }            
+
             bool result = new borrowBLL().renewBook(histories[index].uid, histories[index].bid, histories[index].borrowtime, histories[index].time);
             if(result == false)
             {
