@@ -24,5 +24,15 @@ namespace BLL
         {
             return new userDAL().getUser(u);
         }
+
+        public List<user> GetUsers()
+        {
+            return new userDAL().GetUsers();
+        }
+
+        public bool deleteUser(user u)
+        {
+            return new userDAL().deleteUser(u);
+        }
     }
 }

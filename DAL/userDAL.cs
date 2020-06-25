@@ -52,5 +52,29 @@ namespace DAL
             reader.Close();
             return uuu;
         }
+
+        public List<user> GetUsers()
+        {
+            string cText = "select * from user where admin=0";
+            MySqlDataReader reader = MysqlHelper.getReader(cText);
+            List<user> users = new List<user>();
+            while (reader.Read())
+            {
+                user u = new user();
+                u.uid = int.Parse(reader["uid"] + "");
+                u.name = reader["name"] + "";
+                users.Add(u);
+            }
+            MysqlHelper.conn.Close();
+            reader.Close();
+            return users;
+
+        }
+
+        public bool deleteUser(user u)
+        {
+            string cText = "delete from user where uid=" + u.uid;
+            return MysqlHelper.ExecuteNonQueryProc(cText);
+        }
     }
 }
