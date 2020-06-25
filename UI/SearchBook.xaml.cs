@@ -127,23 +127,12 @@ namespace UI
             string b = (a.GetType().GetProperty("c1").GetValue(a, null)).ToString();
             new bookitBLL().bitit(uid, b);
             searchbook();
-            Console.WriteLine(b);
-
-            //使用C++/CLI
-            int y=Class1.x(2);
-
-            
-            int r = MyAdd((int)9, (int)22);
-            string p = Environment.CurrentDirectory;
 
             //使用COM
             OBJ o = new OBJ();
-            o.push("预定成功！"+y.ToString()+" "+p+" "+r.ToString());
+            o.push("预定成功！");
         }
 
-        //使用win32dll
-        [DllImport("PROJECT11.dll", CallingConvention = CallingConvention.StdCall)]
-        public static extern int MyAdd(int x, int y);
 
         private void Cboroom_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
