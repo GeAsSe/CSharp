@@ -41,20 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BillPrintBLL.cs" />
     <Compile Include="bookBLL.cs" />
     <Compile Include="bookitBLL.cs" />
     <Compile Include="borrowBLL.cs" />
-    <Compile Include="Drug_insert_BLL.cs" />
     <Compile Include="fineBLL.cs" />
-    <Compile Include="IdCard_BLL.cs" />
-    <Compile Include="Prescribe_BLL.cs" />
-    <Compile Include="Register_BLL.cs" />
-    <Compile Include="SectionRoomBLL.cs" />
-    <Compile Include="SectionRoomSonBLL.cs" />
     <Compile Include="userBLL.cs" />
     <Compile Include="userBook_BLL.cs" />
-    <Compile Include="UsersBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

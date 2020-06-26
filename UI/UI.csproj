@@ -103,20 +103,11 @@
     <Compile Include="bookBorrow.xaml.cs">
       <DependentUpon>bookBorrow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Authority.xaml.cs">
-      <DependentUpon>Authority.xaml</DependentUpon>
-    </Compile>
     <Compile Include="bookChange.xaml.cs">
       <DependentUpon>bookChange.xaml</DependentUpon>
     </Compile>
     <Compile Include="bookManage.xaml.cs">
       <DependentUpon>bookManage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ClinicCharge.xaml.cs">
-      <DependentUpon>ClinicCharge.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ClinicDoctor1.xaml.cs">
-      <DependentUpon>ClinicDoctor1.xaml</DependentUpon>
     </Compile>
     <Compile Include="userBorrowManage.xaml.cs">
       <DependentUpon>userBorrowManage.xaml</DependentUpon>
@@ -124,96 +115,9 @@
     <Compile Include="userManage.xaml.cs">
       <DependentUpon>userManage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ClinicManage.xaml.cs">
-      <DependentUpon>ClinicManage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ClinicManage_medicalCard.xaml.cs">
-      <DependentUpon>ClinicManage_medicalCard.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ClinicManage_register.xaml.cs">
-      <DependentUpon>ClinicManage_register.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Drugstore.xaml.cs">
-      <DependentUpon>Drugstore.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="DrugstorePage1.xaml.cs">
-      <DependentUpon>DrugstorePage1.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="DrugstorePage2.xaml.cs">
-      <DependentUpon>DrugstorePage2.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Finance.xaml.cs">
-      <DependentUpon>Finance.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Finance_business.xaml.cs">
-      <DependentUpon>Finance_business.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Finance_salary.xaml.cs">
-      <DependentUpon>Finance_salary.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Finance_staff.xaml.cs">
-      <DependentUpon>Finance_staff.xaml</DependentUpon>
-    </Compile>
     <Compile Include="FullScreenManager\FullScreenManager.cs" />
-    <Compile Include="HospitalManage.xaml.cs">
-      <DependentUpon>HospitalManage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="HospitalManage_bookkeeping.xaml.cs">
-      <DependentUpon>HospitalManage_bookkeeping.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="HospitalManage_payment.xaml.cs">
-      <DependentUpon>HospitalManage_payment.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="HospitalManage_register.xaml.cs">
-      <DependentUpon>HospitalManage_register.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="HospitalManage_searchPatient.xaml.cs">
-      <DependentUpon>HospitalManage_searchPatient.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="HospitalManage_settlement.xaml.cs">
-      <DependentUpon>HospitalManage_settlement.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="HospitalManage_sickroomAdd.xaml.cs">
-      <DependentUpon>HospitalManage_sickroomAdd.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="HospitalManage_sickroomCheck.xaml.cs">
-      <DependentUpon>HospitalManage_sickroomCheck.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ListSettings.xaml.cs">
-      <DependentUpon>ListSettings.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Medicine.xaml.cs">
-      <DependentUpon>Medicine.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MedicinePage1.xaml.cs">
-      <DependentUpon>MedicinePage1.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MedicinePage2.xaml.cs">
-      <DependentUpon>MedicinePage2.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MedicinePage3.xaml.cs">
-      <DependentUpon>MedicinePage3.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SectionroomManage.xaml.cs">
-      <DependentUpon>SectionroomManage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SectionroomRevise.xaml.cs">
-      <DependentUpon>SectionroomRevise.xaml</DependentUpon>
-    </Compile>
     <Compile Include="bookAddition.xaml.cs">
       <DependentUpon>bookAddition.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="StaffAddition.xaml.cs">
-      <DependentUpon>StaffAddition.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SystemManagement.xaml.cs">
-      <DependentUpon>SystemManagement.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Tip.xaml.cs">
-      <DependentUpon>Tip.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Tip2.xaml.cs">
-      <DependentUpon>Tip2.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserWindow.xaml.cs">
       <DependentUpon>UserWindow.xaml</DependentUpon>
@@ -246,10 +150,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Authority.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="bookChange.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -258,14 +158,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ClinicCharge.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ClinicDoctor1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="userBorrowManage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -273,82 +165,6 @@
     <Page Include="userManage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="ClinicManage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ClinicManage_medicalCard.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ClinicManage_register.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Drugstore.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="DrugstorePage1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="DrugstorePage2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Finance.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Finance_business.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Finance_salary.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Finance_staff.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="HospitalManage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="HospitalManage_bookkeeping.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="HospitalManage_payment.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="HospitalManage_register.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="HospitalManage_searchPatient.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="HospitalManage_settlement.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="HospitalManage_sickroomAdd.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="HospitalManage_sickroomCheck.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ListSettings.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="LoginWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -366,49 +182,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Medicine.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MedicinePage1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MedicinePage2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MedicinePage3.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="SectionroomManage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="SectionroomRevise.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="bookAddition.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="StaffAddition.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="SystemManagement.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Tip.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Tip2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserWindow.xaml">
       <SubType>Designer</SubType>
@@ -603,13 +379,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="hospitals.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="hospitals_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <DependentUpon>hospitals.mdf</DependentUpon>
-    </Content>
     <Resource Include="Images\jieyue1.png" />
     <Resource Include="Images\jieyue2.png" />
     <Resource Include="Images\search.png" />
