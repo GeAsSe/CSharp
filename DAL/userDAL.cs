@@ -76,5 +76,21 @@ namespace DAL
             string cText = "delete from user where uid=" + u.uid;
             return MysqlHelper.ExecuteNonQueryProc(cText);
         }
+
+        public bool insertUser(int uid, string name, string password)
+        {
+            string cText = "insert into user(uid, name, password, admin) values (@uid, @name, @password, 0)";
+            MySqlParameter Uid = new MySqlParameter("@uid", MySqlDbType.Int32);
+            MySqlParameter Name = new MySqlParameter("@name", MySqlDbType.VarChar);
+            MySqlParameter Password = new MySqlParameter("@password", MySqlDbType.VarChar);
+
+            Uid.Value = uid;
+            Name.Value = name;
+            Password.Value = password;
+
+            MySqlParameter[] sp = { Uid, Name, Password};
+            return MysqlHelper.ExecuteNonQueryProc(cText, sp);
+
+        }
     }
 }

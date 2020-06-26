@@ -34,5 +34,10 @@ namespace BLL
         {
             return new userDAL().deleteUser(u);
         }
+
+        public bool insertUser(int uid, string name, string password)
+        {
+            return new userDAL().insertUser(uid, name, password);
+        }
     }
 }

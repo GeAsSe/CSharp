@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Model;
 using BLL;
+using System.Runtime.InteropServices;
+using xxxxx.Interop;
 
 namespace UI
 {
@@ -81,9 +83,47 @@ namespace UI
             InitView();
         }
 
+        [DllImport("PROJECT11.dll", CallingConvention = CallingConvention.StdCall)]
+        public static extern IntPtr readbook(IntPtr a);
+
         private void Import_Click(object sender, RoutedEventArgs e)
         {
+            Microsoft.Win32.OpenFileDialog dialog = new Microsoft.Win32.OpenFileDialog();
+            dialog.Filter = ".csv|*.csv";
+            if (dialog.ShowDialog() == true)
+            {
+                try
+                {
+                    string filename = dialog.FileName;
+                    IntPtr ptrIn = Marshal.StringToHGlobalAnsi(filename);
+                    IntPtr ptr = readbook(ptrIn);
+                    string resultstr = Marshal.PtrToStringAnsi(ptr);
+                    string[] userstrs = resultstr.Split(';');
+                    foreach (string userstr in userstrs)
+                    {
+                        if (userstr == "")
+                        {
+                            break;
+                        }
+                        string[] ustr = userstr.Split(',');
+                        int uid = int.Parse(ustr[0]);
+                        string name = ustr[1];
+                        string password = ustr[2];
+                    
+                        bool result = new userBLL().insertUser(uid, name, password);
+                        // Console.WriteLine(bookstr);
+                    }
+                    MessageBox.Show("导入成功!");
+                    users = new userBLL().GetUsers();
+                    InitView();
+                }
+                catch
+                {
+                    MessageBox.Show("导入失败!");
+                }
 
+
+            }
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)
@@ -108,6 +148,14 @@ namespace UI
                 {
                     MessageBox.Show("删除失败！");
                 }
+            }
+        }
+
+        private void KeyEnter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyStates == Keyboard.GetKeyStates(Key.Enter))
+            {
+                Button_Click(sender, e);
             }
         }
     }
