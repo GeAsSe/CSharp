@@ -1,4 +1,4 @@
-﻿<Page x:Class="UI.bookManage"
+﻿<Page x:Class="UI.bookManage" KeyDown="KeyEnter"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -36,7 +36,11 @@
         <Label Content="书 名：" HorizontalAlignment="Left" Height="23" Margin="93,62,0,0" VerticalAlignment="Top" Width="56"/>
         <Button Content="查 找" HorizontalAlignment="Left" Height="34" 
                 Margin="93,104,0,0" VerticalAlignment="Top" Width="99"
-                Name="btnSearch" Click="btnSearch_Click"/>
+                Name="btnSearch" Click="btnSearch_Click">
+            <Button.Background>
+                <ImageBrush x:Name="img" ImageSource="Images\search.png"/>
+            </Button.Background>
+        </Button>
         <Label Content="状 态:" HorizontalAlignment="Left" Height="27" Margin="1028,62,0,0" VerticalAlignment="Top" Width="68" RenderTransformOrigin="3.333,0.741"/>
         <ComboBox HorizontalAlignment="Left" Height="22" Margin="1085,62,0,0" 
                   VerticalAlignment="Top" Width="88" 
@@ -72,7 +76,7 @@
         <Button Content="借出图书" HorizontalAlignment="Left" Margin="320,180,0,0" VerticalAlignment="Top" Width="162" Height="48" Grid.RowSpan="2" Click="Button_Click_2"/>
         <Button Content="添加图书" HorizontalAlignment="Left" Margin="590,180,0,0" VerticalAlignment="Top" Width="162" Height="48" Grid.RowSpan="2" Click="Button_Click"/>
         <Button Content="批量导入图书" HorizontalAlignment="Left" Margin="860,180,0,0" VerticalAlignment="Top" Width="162" Height="48" Grid.RowSpan="2"/>
-        <Button Content="批量导入图书" HorizontalAlignment="Left" Margin="860,180,0,0" VerticalAlignment="Top" Width="162" Height="48" Grid.RowSpan="2"/>
+        <Button Content="批量导入图书" HorizontalAlignment="Left" Margin="860,180,0,0" VerticalAlignment="Top" Width="162" Height="48" Grid.RowSpan="2" Click="Button_Click_4"/>
         <Button Content="删除图书" HorizontalAlignment="Left" Margin="1130,180,0,0" VerticalAlignment="Top" Width="162" Height="48" Grid.RowSpan="2" Click="Button_Click_3"/>
 
     </Grid>

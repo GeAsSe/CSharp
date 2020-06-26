@@ -16,6 +16,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.Runtime.InteropServices;
+using xxxxx.Interop;
 
 namespace UI
 {
@@ -197,6 +199,58 @@ namespace UI
                 }
             }
 
+        }
+
+        private void KeyEnter(object sender, KeyEventArgs e)
+        {
+            if(e.KeyStates == Keyboard.GetKeyStates(Key.Enter))
+            {
+                btnSearch_Click(sender, e);
+            }
+        }
+
+        [DllImport("PROJECT11.dll", CallingConvention = CallingConvention.StdCall)]
+        public static extern IntPtr readbook(IntPtr a);
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dialog = new Microsoft.Win32.OpenFileDialog();
+            dialog.Filter = ".csv|*.csv";
+            if (dialog.ShowDialog() == true)
+            {
+                try
+                {
+                    string filename = dialog.FileName;
+
+                    IntPtr ptrIn = Marshal.StringToHGlobalAnsi(filename);
+                    IntPtr ptr = readbook(ptrIn);
+                    string resultstr = Marshal.PtrToStringAnsi(ptr);
+                    string[] bookstrs = resultstr.Split(';');
+                    foreach (string bookstr in bookstrs)
+                    {
+                        if( bookstr == "" ){
+                            break;
+                        }
+                        string[] bstr = bookstr.Split(',');
+                        string bname = bstr[0];
+                        string isbn = bstr[1];
+                        string author = bstr[2];
+                        string publisher = bstr[3];
+                        Decimal bprice = Decimal.Parse(bstr[4]);
+                        string place = bstr[5];
+                        bool result = new bookBLL().insertBook(bname, isbn, author, publisher, place, bprice);
+                        // Console.WriteLine(bookstr);
+                    }
+                    MessageBox.Show("导入成功!");
+                    initView();
+                }
+                catch
+                {
+                    MessageBox.Show("导入失败!");
+                }
+                
+
+            }
         }
     }
 }

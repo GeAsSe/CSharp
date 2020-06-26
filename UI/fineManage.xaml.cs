@@ -104,5 +104,13 @@ namespace UI
             fines = new fineBLL().GetFines();
             initView();
         }
+
+        private void KeyEnter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyStates == Keyboard.GetKeyStates(Key.Enter))
+            {
+                BtnSearch_Click(sender, e);
+            }
+        }
     }
 }

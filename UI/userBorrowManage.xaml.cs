@@ -161,5 +161,13 @@ namespace UI
                 });
             }
         }
+
+        private void KeyEnter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyStates == Keyboard.GetKeyStates(Key.Enter))
+            {
+                Button_Search(sender, e);
+            }
+        }
     }
 }
