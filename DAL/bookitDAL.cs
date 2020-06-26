@@ -45,7 +45,7 @@ namespace DAL
             MySqlParameter[] sp1 = { Bname, UID };
             MysqlHelper.ExecuteNonQueryProc(s1, sp1);
 
-            string s2= "update book set status=0 where bid=(select bid from history where bname=@bname and uid =@uid and borrowtimes=-1 )";
+            string s2= "update book set status=0 where bid in (select DISTINCT bid from history where bname=@bname and uid =@uid and borrowtimes=-1 )";
             MySqlParameter Bname1 = new MySqlParameter("@bname", MySqlDbType.VarChar);
             MySqlParameter UID1 = new MySqlParameter("@uid", MySqlDbType.Int32);
             Bname1.Value = bname;
@@ -54,8 +54,8 @@ namespace DAL
             MysqlHelper.ExecuteNonQueryProc(s2, sp2);
 
             string s3 = "insert into fine(uid,name,bid,bname,panalty,ftime) " +
-                "values(@uid,(select name from history where bname=@bname and uid =@uid and borrowtimes=-1),(select bid from history where bname=@bname and uid =@uid and borrowtimes=-1),@bname," +
-                "(select price from history natural join book where bname=@bname and uid =@uid and status=0 and borrowtimes=-1),@time)";
+                "values(@uid,(select DISTINCT name from history where bname=@bname and uid =@uid and borrowtimes=-1),(select DISTINCT bid from history where bname=@bname and uid =@uid and borrowtimes=-1),@bname," +
+                "(select DISTINCT price from history natural join book where bname=@bname and uid =@uid and status=0 and borrowtimes=-1),@time)";
             MySqlParameter Bname2 = new MySqlParameter("@bname", MySqlDbType.VarChar);
             MySqlParameter UID2 = new MySqlParameter("@uid", MySqlDbType.Int32);
             MySqlParameter Time = new MySqlParameter("@time", MySqlDbType.VarChar);
