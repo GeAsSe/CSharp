@@ -15,6 +15,7 @@ using System.Reflection;
 using BLL;
 using Model;
 using System.ComponentModel;
+using xxxxx.Interop;
 
 namespace UI
 {
@@ -89,20 +90,24 @@ namespace UI
             int result = new borrowBLL().Borrow(u,bb);
             if(result == -1)
             {
-                MessageBox.Show("借阅失败，系统错误。");
+                OBJ o = new OBJ();
+                o.push("借阅失败，系统错误。");
             }
             else if(result == 0)
             {
-                MessageBox.Show("借阅失败,书已被预定。");
+                OBJ o = new OBJ();
+                o.push("借阅失败,书已被预定。");
             }
             else if(result == 1)
             {
-                MessageBox.Show("借阅失败,有书未归还。");
+                OBJ o = new OBJ();
+                o.push("借阅失败,有书未归还。");
             }
             else if(result == 2)
             {
                 borrowBookEvent();
-                MessageBox.Show("借阅成功!");
+                OBJ o = new OBJ();
+                o.push("借阅成功!");
                 this.Close();
                 bookManage.writelock.Set();
             }

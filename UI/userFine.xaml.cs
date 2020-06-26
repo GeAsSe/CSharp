@@ -13,6 +13,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using xxxxx.Interop;
+
 
 namespace UI
 {
@@ -50,11 +52,13 @@ namespace UI
             bool result =  new borrowBLL().lossBook(hh, b);
             if(result == false)
             {
-                MessageBox.Show("挂失失败!");
+                OBJ o = new OBJ();
+                o.push("挂失失败!");
             }
             else
             {
-                MessageBox.Show("挂失成功");
+                OBJ o = new OBJ();
+                o.push("挂失成功!");
                 lossBookEvent();
             }
             this.Close();

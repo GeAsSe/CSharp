@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using xxxxx.Interop;
 
 namespace UI
 {
@@ -50,12 +51,14 @@ namespace UI
                     bool result = new bookBLL().insertBook(bname, isbn, author, publisher, place, bprice);
                     if(result == false)
                     {
-                        MessageBox.Show("插入数据失败。");
+                        OBJ o = new OBJ();
+                        o.push("添加书籍失败!");
                     }
                     else
                     {
                         this.Close();
-                        MessageBox.Show("添加书籍成功！");
+                        OBJ o = new OBJ();
+                        o.push("添加书籍成功！");
                         addBookEvent();
                     }
                 }
