@@ -28,7 +28,7 @@ namespace DAL
             MySqlParameter Time = new MySqlParameter("@time", MySqlDbType.VarChar);
             MySqlParameter Bname = new MySqlParameter("@bname", MySqlDbType.VarChar);
             MySqlParameter UID = new MySqlParameter("@uid", MySqlDbType.Int32);
-            Time.Value = time;
+            Time.Value = time.ToString("yyyy-MM-dd");
             Bname.Value = bname;
             UID.Value = userId;
             MySqlParameter[] sp = { Time, Bname,UID };

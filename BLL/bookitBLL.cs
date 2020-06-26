@@ -21,7 +21,7 @@ namespace BLL
 
         public bool lose(int uid,string bname)
         {
-            string time = DateTime.Now.ToString();
+            string time = DateTime.Now.ToString("yyyy-MM-dd");
             return new bookitDAL().lose(uid, bname, time);
         }
     }
