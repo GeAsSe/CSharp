@@ -180,7 +180,8 @@ namespace UI
             {
                 if (index != -1)
                 {
-                    MessageBox.Show("此书不可删除。");
+                    OBJ o = new OBJ();
+                    o.push("此书不可删除!");
                 }
                 return;
             }
@@ -190,12 +191,14 @@ namespace UI
                 bool result = new bookBLL().deleteBook(books[index]);
                 if(result == true)
                 {
-                    MessageBox.Show("删除成功!");
+                    OBJ o = new OBJ();
+                    o.push("删除成功!");
                     initView();
                 }
                 else
                 {
-                    MessageBox.Show("删除失败！");
+                    OBJ o = new OBJ();
+                    o.push("删除失败！");
                 }
             }
 
@@ -241,12 +244,14 @@ namespace UI
                         bool result = new bookBLL().insertBook(bname, isbn, author, publisher, place, bprice);
                         // Console.WriteLine(bookstr);
                     }
-                    MessageBox.Show("导入成功!");
+                    OBJ o = new OBJ();
+                    o.push("导入成功!");
                     initView();
                 }
                 catch
                 {
-                    MessageBox.Show("导入失败!");
+                    OBJ o = new OBJ();
+                    o.push("导入失败!");
                 }
                 
 

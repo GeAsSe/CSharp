@@ -113,13 +113,15 @@ namespace UI
                         bool result = new userBLL().insertUser(uid, name, password);
                         // Console.WriteLine(bookstr);
                     }
-                    MessageBox.Show("导入成功!");
+                    OBJ o = new OBJ();
+                    o.push("导入成功!");
                     users = new userBLL().GetUsers();
                     InitView();
                 }
                 catch
                 {
-                    MessageBox.Show("导入失败!");
+                    OBJ o = new OBJ();
+                    o.push("导入失败，请检查文件后重试!");
                 }
 
 
@@ -140,13 +142,15 @@ namespace UI
                 bool result = new userBLL().deleteUser(users[index]);
                 if (result == true)
                 {
-                    MessageBox.Show("删除成功!");
+                    OBJ o = new OBJ();
+                    o.push("删除成功!");
                     users = new userBLL().GetUsers();
                     InitView();
                 }
                 else
                 {
-                    MessageBox.Show("删除失败！");
+                    OBJ o = new OBJ();
+                    o.push("删除失败！");
                 }
             }
         }

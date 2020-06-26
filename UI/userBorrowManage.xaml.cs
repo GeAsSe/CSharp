@@ -16,6 +16,7 @@ using BLL;
 using Model;
 using CLR1;
 using System.Runtime.InteropServices;
+using xxxxx.Interop;
 
 
 namespace UI
@@ -63,7 +64,8 @@ namespace UI
             {
                 if(index != -1)
                 {
-                    MessageBox.Show("此书已经不能再续借！");
+                    OBJ o = new OBJ();
+                    o.push("此书已经不能再续借！");
                 }
                 return;
             }
@@ -76,18 +78,21 @@ namespace UI
 
             if(Class1.DateMinus(sbyteStr1, sbyteStr2) > 15)
             {
-                MessageBox.Show("只能在还期15天内续借！");
+                OBJ o = new OBJ();
+                o.push("只能在还期15天内续借！");
                 return;
             }            
 
             bool result = new borrowBLL().renewBook(histories[index].uid, histories[index].bid, histories[index].borrowtime, histories[index].time);
             if(result == false)
             {
-                MessageBox.Show("有逾期行为，不能续借！");
+                OBJ o = new OBJ();
+                o.push("有逾期行为，不能续借！");
             }
             else
             {
-                MessageBox.Show("续借成功");
+                OBJ o = new OBJ();
+                o.push("续借成功！");
                 InitView();
             }
             
