@@ -245,10 +245,7 @@
   <ItemGroup>
     <Resource Include="Images\close.png" />
     <Resource Include="Images\upperPanel.jpg" />
-    <Resource Include="Images\left.png" />
     <Resource Include="Images\bottomPanel.jpg" />
-    <Resource Include="Images\right.png" />
-    <Resource Include="Images\up.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\LoginD.png" />
@@ -261,99 +258,25 @@
     <Resource Include="Images\Btn-.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\guahao.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\DBbackup.png" />
-    <Resource Include="Images\DBre.png" />
-    <Resource Include="Images\menzhen.png" />
-    <Resource Include="Images\zhuyuan.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\keshi.png" />
-    <Resource Include="Images\quanxian.png" />
     <Resource Include="Images\yuangong.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\zyd.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\ghd.jpg" />
-    <Resource Include="Images\mzd.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\print.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\tip.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\jianyaodan.png" />
-    <Resource Include="Images\yifayao.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\jianyaodan2.png" />
-    <Resource Include="Images\yifayao2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\drug_in.png" />
-    <Resource Include="Images\drug_in2.png" />
-    <Resource Include="Images\drug_out.png" />
-    <Resource Include="Images\drug_out2.png" />
-    <Resource Include="Images\drug_select.png" />
-    <Resource Include="Images\drug_select2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\deepPanel.jpg" />
-    <Resource Include="Images\gongzi1.png" />
-    <Resource Include="Images\gongzi2.png" />
     <Resource Include="Images\lightPanel.jpg" />
-    <Resource Include="Images\yingye1.png" />
-    <Resource Include="Images\yingye2.png" />
     <Resource Include="Images\yuangong1.png" />
-    <Resource Include="Images\yuangong2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\xbr1.png" />
-    <Resource Include="Images\xbr2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\kxy.png" />
-    <Resource Include="Images\kzy.jpg" />
-    <Resource Include="Images\xbl1.png" />
-    <Resource Include="Images\xbl2.png" />
-    <Resource Include="Images\yao.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\closeLight.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\ky1.png" />
-    <Resource Include="Images\ky2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\bl1.png" />
-    <Resource Include="Images\bl2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\card1.png" />
     <Resource Include="Images\card2.png" />
-    <Resource Include="Images\ylk1.png" />
-    <Resource Include="Images\ylk2.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\hos1.png" />
     <Resource Include="Images\hos2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\empty.png" />
-    <Resource Include="Images\full.png" />
-    <Resource Include="Images\weixiu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\empty1.png" />
-    <Resource Include="Images\full1.png" />
-    <Resource Include="Images\weixiu1.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\MAX.png" />
